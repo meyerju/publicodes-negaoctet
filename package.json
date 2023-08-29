@@ -1,0 +1,26 @@
+{
+  "name": "@incubateur-ademe/co2-model-digital-usage",
+  "version": "0.1.0",
+  "description": "Publicodes model for calculating greenhouse gas emissions from digital uses",
+  "main": "null",
+  "type": "module",
+  "files": [
+    "co2-model-digital-usage.model.json"
+  ],
+  "scripts": {
+    "build": "node compile.js"
+  },
+  "repository": "git@github.com:incubateur-ademe/co2-model-digital-usage.git",
+  "homepage": "https://github.com/incubateur-ademe/co2-model-digital-usage#readme",
+  "bugs": {
+    "url": "https://github.com/incubateur-ademe/co2-model-digital-usage/issues"
+  },
+  "authors": [
+    "Clément Auger <clement.auger@beta.gouv.fr>",
+    "Emile Rolley <emile.rolley@tuta.io>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@incubateur-ademe/publicodes-tools": "^0.2.1"
+  }
+}
