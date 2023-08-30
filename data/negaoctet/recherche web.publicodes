@@ -1,4 +1,4 @@
-index:
+recherche web:
   titre: Recherche sur le web
   formule:
     variations:
@@ -14,7 +14,7 @@ index:
       - sinon: 0
   unité: gCO2e
 
-temps de saisie:
+recherche web . temps de saisie:
   titre: Temps de saisie de la requête
   question: Quelle est la durée de la saisie ?
   par défaut: 50 / 60
@@ -23,26 +23,26 @@ temps de saisie:
     "Analyse comparée des impacts environnementaux de la communication par voie électronique - Volet requête web : Rapport final"
     BioIS pour l'ADEME, 18 février 2011
 
-temps de saisie en heure:
+recherche web . temps de saisie en heure:
   formule: temps de saisie / 60
   unité: heure
 
-taille de la requete:
+recherche web . taille de la requete:
   titre: Taille de la requête
   question: Quelle est la taille de la requete (en ko)?
   par défaut: 16
   unité: ko
   note: Mesure Negaoctet
 
-taille de la requete en Mo:
+recherche web . taille de la requete en Mo:
   formule: taille de la requete / 1024
   unité: Mo
 
-taille de la requete en Go:
+recherche web . taille de la requete en Go:
   formule: taille de la requete / 1024 / 1024
   unité: Go
 
-taille de la page:
+recherche web . taille de la page:
   titre: Taille de la page de résultats
   question: Quelle est la taille de la page de résultats (en ko)?
   par défaut: 144.5
@@ -50,15 +50,15 @@ taille de la page:
   référence: |
     Basé sur la taille moyenne des pages des 10 recherches les plus effectuées en 2021 (source : google trends)
 
-taille de la page en Mo:
+recherche web . taille de la page en Mo:
   formule: taille de la page / 1024
   unité: Mo
 
-taille de la page en Go:
+recherche web . taille de la page en Go:
   formule: taille de la page / 1024 / 1024
   unité: Go
 
-temps de consultation:
+recherche web . temps de consultation:
   titre: Temps de consultation de la page de résultat
   question: Quel est le temps de consultation de la page de résultat ?
   par défaut: 1
@@ -67,11 +67,11 @@ temps de consultation:
     "Analyse comparée des impacts environnementaux de la communication par voie électronique - Volet requête web : Rapport final"
     BioIS pour l'ADEME, 18 février 2011
 
-temps de consultation en heure:
+recherche web . temps de consultation en heure:
   formule: temps de consultation / 60
   unité: heure
 
-nombre de pages de résultats lues:
+recherche web . nombre de pages de résultats lues:
   titre: Nombre de pages de résultats consultées
   question: Quel est le nombre de page de résultats consultées pour la recherche ?
   par défaut: 1
@@ -79,7 +79,7 @@ nombre de pages de résultats lues:
     "Analyse comparée des impacts environnementaux de la communication par voie électronique - Volet requête web : Rapport final"
     BioIS pour l'ADEME, 18 février 2011
 
-terminaux:
+recherche web . terminaux:
   formule:
     somme:
       - construction
@@ -89,7 +89,7 @@ terminaux:
       - La sollicitation de l’ordinateur de l’utilisateur pendant la saisie de la requete (saisie des mots cles)
       - La sollicitation de l’ordinateur de l’utilisateur pendant l’affichage de la page de resultats et la consultation des resultats
 
-terminaux . construction:
+recherche web . terminaux . construction:
   formule:
     recalcul:
       règle: construction réelle
@@ -101,7 +101,7 @@ terminaux . construction:
         moyenne utilisation tablette par défaut: appareil . moyenne utilisation tablette
         moyenne utilisation smartphone par défaut: appareil . moyenne utilisation smartphone
 
-appareil:
+recherche web . appareil:
   titre: Appareil utilisé
   avec:
     ordinateur et écran:
@@ -120,16 +120,16 @@ appareil:
         - smartphone
   par défaut: "'moyenne'" #default value has to be set to make sure rules using "appareil" are defined
 
-appareil . moyenne utilisation ordinateur et écran: 24%
-appareil . moyenne utilisation ordinateur portable: 24%
-appareil . moyenne utilisation tablette: 8%
-appareil . moyenne utilisation smartphone: 45%
+recherche web . appareil . moyenne utilisation ordinateur et écran: 24%
+recherche web . appareil . moyenne utilisation ordinateur portable: 24%
+recherche web . appareil . moyenne utilisation tablette: 8%
+recherche web . appareil . moyenne utilisation smartphone: 45%
 
-appareil . durée totale sollicitation:
+recherche web . appareil . durée totale sollicitation:
   formule: temps de saisie en heure + temps de consultation en heure * nombre de pages de résultats lues
   unité: heure
 
-terminaux . usage:
+recherche web . terminaux . usage:
   formule:
     recalcul:
       règle: usage réel
@@ -141,7 +141,7 @@ terminaux . usage:
         moyenne utilisation tablette par défaut: appareil . moyenne utilisation tablette
         moyenne utilisation smartphone par défaut: appareil . moyenne utilisation smartphone
 
-transmission:
+recherche web . transmission:
   formule:
     recalcul:
       règle: transmission par défaut
@@ -154,7 +154,7 @@ transmission:
       - La transmission des informations relatives a la requête au sein de la boucle locale et du reseau Internet
       - La transmission des informations d'affichage de la page de résutat au sein de la boucle locale et du reseau Internet
 
-transmission . réseau:
+recherche web . transmission . réseau:
   titre: Type de réseau utilisé
   avec:
     fixe FR:
@@ -176,7 +176,7 @@ transmission . réseau:
         - mobile EU
   par défaut: "'fixe FR'"
 
-data center:
+recherche web . data center:
   formule:
     somme:
       - construction
@@ -193,7 +193,7 @@ data center:
       - Transfert des informations via des switchs (ou concentrateurs) et des serveurs assurant les fonctions firewall ;
       - Transfert des informations via le routeur et serveur d’entree du Data Center ;
 
-data center . allocation serveur par Mo:
+recherche web . data center . allocation serveur par Mo:
   formule: 1 / 10052100000
   note: |
     "Allocation par rapport au volume d'information traité par les serveurs, avec :
@@ -207,13 +207,13 @@ data center . allocation serveur par Mo:
     Soit, pour 1Mo d'information traitée, une règle d'allocation de :
     1/10 052 100 000"
 
-data center . facteur d'allocation serveur:
+recherche web . data center . facteur d'allocation serveur:
   formule: (taille de la requete en Mo + taille de la page en Mo) * allocation serveur par Mo
   référence: |
     "Analyse comparée des impacts environnementaux de la communication par voie électronique - Volet requête web : Rapport final"
     BioIS pour l'ADEME, 18 février 2011
 
-data center . construction:
+recherche web . data center . construction:
   formule:
     recalcul:
       règle: construction data center
@@ -221,7 +221,7 @@ data center . construction:
         construction data center . serveur . facteur d'allocation: facteur d'allocation serveur
   note: Stockage non pris en compte, considéré mutualisé entre un très grand nombre d'utilisateurs
 
-data center . usage:
+recherche web . data center . usage:
   formule:
     recalcul:
       règle: usage data center
@@ -229,13 +229,13 @@ data center . usage:
         usage data center . consommation électricité: consommation électricité
   unité: gCO2e
 
-data center . usage . consommation électricité:
+recherche web . data center . usage . consommation électricité:
   formule: consommation totale serveur * facteur d'allocation serveur * 1000
   unité: kWh
 
-data center . usage . consommation totale serveur:
+recherche web . data center . usage . consommation totale serveur:
   formule: consommation annuelle serveur * serveur . durée de vie
 
-data center . usage . consommation annuelle serveur:
+recherche web . data center . usage . consommation annuelle serveur:
   formule: serveur . puissance en mode actif * 24 * 365 / 1000
   unité: kWh / an

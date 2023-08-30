@@ -1,4 +1,4 @@
-index:
+fichier:
   formule:
     variations:
       - si: taille > 0
@@ -12,13 +12,13 @@ index:
     Les terminaux ne sont pas pris en compte 
     (hypothèse : le téléchargement / l'upload de fichier se fait en tâche de fond, en même temps que d'autres actions)
 
-taille:
+fichier . taille:
   titre: Taille du fichier
   question: Quelle est la taille du mail (en Go)?
   par défaut: 1
   unité: Go
 
-transmission:
+fichier . transmission:
   formule:
     recalcul:
       règle: transmission par défaut
@@ -27,7 +27,7 @@ transmission:
         transmission par défaut . réseau par défaut: réseau
   unité: gCO2e
 
-transmission . réseau:
+fichier . transmission . réseau:
   titre: Type de réseau utilisé
   avec:
     fixe FR:
@@ -49,14 +49,14 @@ transmission . réseau:
         - mobile EU
   par défaut: "'fixe FR'"
 
-data center:
+fichier . data center:
   formule:
     somme:
       - construction
       - usage
   unité: gCO2e
 
-data center . construction:
+fichier . data center . construction:
   formule:
     recalcul:
       règle: construction data center
@@ -65,11 +65,11 @@ data center . construction:
         construction data center . stockage . facteur d'allocation: 0
   note: Stockage non pris en compte, considérant que le fichier peut être partagé par un grand nombre de personnes
 
-data center . facteur allocation serveur:
+fichier . data center . facteur allocation serveur:
   formule: streaming . data center . nombre de serveurs / streaming . data center . volume total de transfert de données / serveur . durée de vie
   note: Idem streaming
 
-data center . usage:
+fichier . data center . usage:
   formule:
     recalcul:
       règle: usage data center
@@ -80,14 +80,14 @@ data center . usage:
     La quantité de serveur dédié pour l'upload d'un fichier n'étant pas connue, 
     il a été considéré par hypothèse que celle-ci est similaire à celle de la vidéo en ligne.
 
-data center . usage . consommation électricité:
+fichier . data center . usage . consommation électricité:
   formule: taille * électricité par Go en Wh / 1000
   unité: kWh
 
-data center . usage . électricité par Go en Wh:
+fichier . data center . usage . électricité par Go en Wh:
   formule: électricité par Go * 1000000
   unité: Wh/Go
 
-data center . usage . électricité par Go:
+fichier . data center . usage . électricité par Go:
   formule: streaming . data center . usage . électricité par Go
   unité: MWh/Go

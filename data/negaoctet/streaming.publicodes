@@ -1,4 +1,4 @@
-index:
+streaming:
   formule:
     variations:
       - si: durée > 0
@@ -10,7 +10,7 @@ index:
       - sinon: 0
   unité: gCO2e
 
-qualité:
+streaming . qualité:
   titre: Qualité de la vidéo
   avec:
     SD:
@@ -27,7 +27,7 @@ qualité:
         - ultra HD
   par défaut: "'HD'"
 
-qualité . facteur qualité:
+streaming . qualité . facteur qualité:
   formule:
     variations:
       - si: qualité = 'SD'
@@ -38,30 +38,30 @@ qualité . facteur qualité:
         alors: 7
   unité: Go/heure
 
-durée:
+streaming . durée:
   titre: Temps de visionnage
   question: Quelle est la durée de la vidéo ?
   par défaut: 60
   unité: minute
 
-durée en heure:
+streaming . durée en heure:
   titre: Temps de visionnage en heure
   formule: durée / 60
   unité: heure
 
-taille:
+streaming . taille:
   titre: Taille de la vidéo
   formule: durée en heure * qualité . facteur qualité
   unité: Go
 
-terminaux:
+streaming . terminaux:
   formule:
     somme:
       - construction
       - usage
   unité: gCO2e
 
-terminaux . construction:
+streaming . terminaux . construction:
   formule:
     recalcul:
       règle: construction réelle
@@ -74,7 +74,7 @@ terminaux . construction:
         moyenne utilisation smartphone par défaut: appareil . moyenne utilisation smartphone
         moyenne utilisation TV par défaut: appareil . moyenne utilisation TV
 
-appareil:
+streaming . appareil:
   titre: Appareil utilisé
   avec:
     ordinateur et écran:
@@ -95,13 +95,13 @@ appareil:
         - TV
     par défaut: "'moyenne'" # default value has to be set to make sure rules using "appareil" are defined
 
-appareil . moyenne utilisation ordinateur et écran: 0%
-appareil . moyenne utilisation ordinateur portable: 15%
-appareil . moyenne utilisation tablette: 10%
-appareil . moyenne utilisation smartphone: 5%
-appareil . moyenne utilisation TV: 70%
+streaming . appareil . moyenne utilisation ordinateur et écran: 0%
+streaming . appareil . moyenne utilisation ordinateur portable: 15%
+streaming . appareil . moyenne utilisation tablette: 10%
+streaming . appareil . moyenne utilisation smartphone: 5%
+streaming . appareil . moyenne utilisation TV: 70%
 
-terminaux . usage:
+streaming . terminaux . usage:
   formule:
     recalcul:
       règle: usage réel
@@ -114,7 +114,7 @@ terminaux . usage:
         moyenne utilisation smartphone par défaut: appareil . moyenne utilisation smartphone
         moyenne utilisation TV par défaut: appareil . moyenne utilisation TV
 
-transmission:
+streaming . transmission:
   formule:
     recalcul:
       règle: transmission par défaut
@@ -123,7 +123,7 @@ transmission:
         transmission par défaut . réseau par défaut: réseau
   unité: gCO2e
 
-transmission . réseau:
+streaming . transmission . réseau:
   titre: Type de réseau utilisé
   avec:
     fixe FR:
@@ -145,14 +145,14 @@ transmission . réseau:
         - mobile EU
   par défaut: "'fixe FR'"
 
-data center:
+streaming . data center:
   formule:
     somme:
       - construction
       - usage
   unité: gCO2e
 
-data center . construction:
+streaming . data center . construction:
   formule:
     recalcul:
       règle: construction data center
@@ -160,9 +160,9 @@ data center . construction:
         construction data center . serveur . facteur d'allocation: facteur d'allocation serveur
   note: Stockage négligé car divisé entre un nombre très important de visionnage
 
-data center . construction . facteur d'allocation serveur: nombre de serveurs / nombre d'heures de visionnage par an / serveur . durée de vie
+streaming . data center . construction . facteur d'allocation serveur: nombre de serveurs / nombre d'heures de visionnage par an / serveur . durée de vie
 
-data center . usage:
+streaming . data center . usage:
   formule:
     recalcul:
       règle: usage data center
@@ -170,49 +170,49 @@ data center . usage:
         usage data center . consommation électricité: consommation électricité
   unité: gCO2e
 
-data center . usage . consommation électricité:
+streaming . data center . usage . consommation électricité:
   formule: taille * électricité par Go en Wh / 1000
   unité: kWh
 
-data center . usage . électricité par Go en Wh:
+streaming . data center . usage . électricité par Go en Wh:
   formule: électricité par Go * 1000000
   unité: Wh/Go
 
-data center . usage . électricité par Go:
+streaming . data center . usage . électricité par Go:
   formule: (électricité directe consommée par an + électricité indirecte consommée par an) / volume total de transfert de données
   unité: MWh/Go
 
-data center . nombre de serveurs:
+streaming . data center . nombre de serveurs:
   formule: puissance installée avant PUE / serveur . puissance
 
-data center . volume total de transfert de données:
+streaming . data center . volume total de transfert de données:
   formule: nombre d'heures de visionnage par an * consommation de donnée moyenne par heure de visionnage
 
-data center . puissance installée avant PUE:
+streaming . data center . puissance installée avant PUE:
   formule: (électricité directe consommée par an + électricité indirecte consommée par an) / serveur . PUE streaming * 1000000 / 365 / 24
 
-électricité directe consommée par an:
+streaming . électricité directe consommée par an:
   formule: 94000
   unité: MWh
   référence: Netflix Environmental Social Governance 2019
 
-électricité indirecte consommée par an:
+streaming . électricité indirecte consommée par an:
   formule: 357000
   unité: MWh
   référence: Netflix Environmental Social Governance 2019
 
-consommation de donnée moyenne par heure de visionnage:
+streaming . consommation de donnée moyenne par heure de visionnage:
   formule: 1.9
   unité: Go
   référence: |
     "Factcheck: What is the carbon footprint of streaming video on Netflix?" CarbonBrief
 
-nombre d'utilisateurs par an:
+streaming . nombre d'utilisateurs par an:
   formule: 167000000
   référence: |
     "Factcheck: What is the carbon footprint of streaming video on Netflix?" CarbonBrief
 
-nombre d'heures de visionnage par an:
+streaming . nombre d'heures de visionnage par an:
   formule: 2 * 365 * nombre d'utilisateurs par an
   note: |
     On a ici une hypothèse importante: les utilisateurs passeraient 2 heures sur Netflix par jour en moyenne.
