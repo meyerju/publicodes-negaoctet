@@ -8,7 +8,7 @@ import Router from "@koa/router";
 // TODO: add versioning
 const modelName = "Usage numérique";
 const version = "0.1.0";
-const modelPath = "co2-model-digital-usage.model.json";
+const modelPath = "modele-numerique.model.json";
 
 const model = JSON.parse(readFileSync(modelPath, "utf-8"));
 

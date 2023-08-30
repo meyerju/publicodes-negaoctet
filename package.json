@@ -1,21 +1,21 @@
 {
-  "name": "@incubateur-ademe/co2-model-digital-usage",
+  "name": "@incubateur-ademe/modele-numerique",
   "version": "0.1.0",
-  "description": "Publicodes model for calculating greenhouse gas emissions from digital uses",
+  "description": "Modèle Publicodes pour calculer l'impact (en CO2eq) du numérique",
   "main": "null",
   "type": "module",
   "files": [
-    "co2-model-digital-usage.model.json"
+    "modele-numerique.model.json"
   ],
   "scripts": {
     "build": "node build.js",
     "api": "yarn build && node api/index.js",
     "api:watch": "yarn build && nodemon api/index.js"
   },
-  "repository": "git@github.com:incubateur-ademe/co2-model-digital-usage.git",
-  "homepage": "https://github.com/incubateur-ademe/co2-model-digital-usage#readme",
+  "repository": "git@github.com:incubateur-ademe/modele-numerique.git",
+  "homepage": "https://github.com/incubateur-ademe/modele-numerique#readme",
   "bugs": {
-    "url": "https://github.com/incubateur-ademe/co2-model-digital-usage/issues"
+    "url": "https://github.com/incubateur-ademe/modele-numerique/issues"
   },
   "authors": [
     "Clément Auger <clement.auger@beta.gouv.fr>",

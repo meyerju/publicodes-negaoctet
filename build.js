@@ -4,7 +4,7 @@ import { disabledLogger } from "@incubateur-ademe/publicodes-tools";
 import Engine from "publicodes";
 
 const srcFiles = "data/**/*.publicodes";
-const destPath = "co2-model-digital-usage.model.json";
+const destPath = "modele-numerique.model.json";
 
 const model = getModelFromSource(srcFiles, { verbose: true });
 
