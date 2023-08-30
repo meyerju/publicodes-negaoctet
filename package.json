@@ -8,7 +8,7 @@
     "co2-model-digital-usage.model.json"
   ],
   "scripts": {
-    "build": "node compile.js"
+    "build": "node build.js"
   },
   "repository": "git@github.com:incubateur-ademe/co2-model-digital-usage.git",
   "homepage": "https://github.com/incubateur-ademe/co2-model-digital-usage#readme",
