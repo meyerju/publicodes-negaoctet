@@ -9,8 +9,8 @@
   ],
   "scripts": {
     "build": "node build.js",
-    "api:dev": "nodemon api/index.js",
-    "api:start": "node api/index.js"
+    "api": "yarn build && node api/index.js",
+    "api:watch": "yarn build && nodemon api/index.js"
   },
   "repository": "git@github.com:incubateur-ademe/co2-model-digital-usage.git",
   "homepage": "https://github.com/incubateur-ademe/co2-model-digital-usage#readme",

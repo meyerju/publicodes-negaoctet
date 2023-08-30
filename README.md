@@ -1,13 +1,25 @@
-# Digital usage model
+# Modèle _Usage numérique_
 
-A [Publicodes](https://publi.codes) model for calculating greenhouse gas
-emissions from digital uses.
+Un modèle [Publicodes](https://publi.codes) pour calculer l'impact des usages
+numérique en équivalent CO2.
 
-## Build
+## Compiler le modèle
 
-To install dependencies and compile all the Publicodes files into a standalone
-JSON file, simply run:
+Pour installer les dépendences et compiler tous les fichiers `.publicodes` en
+un seul fichier JSON, il suffit d'exécuter la commande suivante : 
 
 ```
 yarn && yarn build
+```
+
+## Lancer l'API
+
+Pour lancer le serveur Node permettant d'utiliser l'API REST, il faut utiliser les commandes
+suivantes : 
+
+```
+yarn run api
+
+# En watch-mode
+yarn run api:watch
 ```
