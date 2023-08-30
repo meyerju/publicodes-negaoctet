@@ -8,7 +8,9 @@
     "co2-model-digital-usage.model.json"
   ],
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js",
+    "api:dev": "nodemon api/index.js",
+    "api:start": "node api/index.js"
   },
   "repository": "git@github.com:incubateur-ademe/co2-model-digital-usage.git",
   "homepage": "https://github.com/incubateur-ademe/co2-model-digital-usage#readme",
@@ -21,9 +23,17 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@incubateur-ademe/publicodes-tools": "^0.2.1"
+    "@incubateur-ademe/publicodes-tools": "^0.2.1",
+    "@publicodes/api": "^1.0.0-beta.71",
+    "nodemon": "^3.0.1"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@koa/cors": "^4.0.0",
+    "@koa/router": "^12.0.0",
+    "koa": "^2.14.2",
+    "publicodes": "^1.0.0-beta.71"
   }
 }
