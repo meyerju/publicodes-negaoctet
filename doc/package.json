@@ -11,10 +11,10 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@incubateur-ademe/modele-numerique": "workspace:^",
     "@types/node": "^16.18.46",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
-    "@incubateur-ademe/modele-numerique": "workspace:^",
     "publicodes-react": "^1.0.0-beta.71",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

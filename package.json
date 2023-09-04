@@ -1,7 +1,6 @@
 {
   "name": "root",
   "version": "0.1.2",
-  "private": "true",
   "type": "module",
   "workspaces": [
     "doc",
@@ -18,5 +17,5 @@
   "devDependencies": {
     "@incubateur-ademe/publicodes-tools": "^0.2.1"
   },
-  "dependencies": {}
+  "packageManager": "yarn@3.6.3"
 }
