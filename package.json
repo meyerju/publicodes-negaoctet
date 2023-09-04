@@ -1,39 +1,19 @@
 {
-  "name": "@incubateur-ademe/modele-numerique",
-  "version": "0.1.0",
-  "description": "Modèle Publicodes pour calculer l'impact (en CO2eq) du numérique",
-  "main": "null",
+  "name": "root",
+  "private": "true",
   "type": "module",
-  "files": [
-    "modele-numerique.model.json"
+  "workspaces": [
+    "doc",
+    "api",
+    "rules"
   ],
   "scripts": {
-    "build": "node build.js",
-    "api": "yarn build && node api/index.js",
-    "api:watch": "yarn build && nodemon api/index.js"
+    "build": "yarn --cwd rules build",
+    "doc:start": "yarn --cwd doc start"
   },
   "repository": "git@github.com:incubateur-ademe/modele-numerique.git",
-  "homepage": "https://github.com/incubateur-ademe/modele-numerique#readme",
-  "bugs": {
-    "url": "https://github.com/incubateur-ademe/modele-numerique/issues"
-  },
-  "authors": [
-    "Clément Auger <clement.auger@beta.gouv.fr>",
-    "Emile Rolley <emile.rolley@tuta.io>"
-  ],
-  "license": "MIT",
   "devDependencies": {
-    "@incubateur-ademe/publicodes-tools": "^0.2.1",
-    "@publicodes/api": "^1.0.0-beta.71",
-    "nodemon": "^3.0.1"
+    "@incubateur-ademe/publicodes-tools": "^0.2.1"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "dependencies": {
-    "@koa/cors": "^4.0.0",
-    "@koa/router": "^12.0.0",
-    "koa": "^2.14.2",
-    "publicodes": "^1.0.0-beta.71"
-  }
+  "dependencies": {}
 }

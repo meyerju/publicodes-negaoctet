@@ -3,8 +3,8 @@ import { getModelFromSource } from "@incubateur-ademe/publicodes-tools/compilati
 import { disabledLogger } from "@incubateur-ademe/publicodes-tools";
 import Engine from "publicodes";
 
-const srcFiles = "data/**/*.publicodes";
-const destPath = "modele-numerique.model.json";
+const srcFiles = "./**/*.publicodes";
+const destPath = "model.json";
 
 const model = getModelFromSource(srcFiles, { verbose: true });
 
@@ -16,5 +16,22 @@ try {
 }
 
 writeFileSync(destPath, JSON.stringify(model, null, 2));
-
 console.log(`✅ Model compiled to ${destPath}`);
+
+let indexDTypes = Object.keys(model).reduce(
+  (acc, dottedName) => acc + `| "${dottedName}"\n`,
+  `
+import { Rule } from "publicodes";
+
+export type DottedName = 
+`,
+);
+
+indexDTypes += `
+declare let rules: Record<DottedName, Rule>
+
+export default rules;
+`;
+
+writeFileSync("index.d.ts", indexDTypes);
+console.log(`✅ index.d.ts generated`);
