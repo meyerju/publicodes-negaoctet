@@ -1,6 +1,6 @@
 {
   "name": "@incubateur-ademe/modele-numerique",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Modèle Publicodes pour calculer l'impact (en CO2eq) du numérique",
   "type": "module",
   "main": "index.js",
