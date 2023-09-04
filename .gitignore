@@ -2,3 +2,4 @@ node_modules
 .yarn
 model.json
 index.d.ts
+index.js
