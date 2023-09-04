@@ -1,17 +1,16 @@
 {
   "name": "modele-numerique-react-doc",
   "version": "0.1.0",
-  "homepage": "https://incubateur-ademe.github.io/modele-numerique",
   "private": true,
+  "homepage": "https://incubateur-ademe.github.io/modele-numerique",
   "scripts": {
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
-    "start": "DEV=true react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@incubateur-ademe/modele-numerique": "workspace:^",
     "@types/node": "^16.18.46",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
@@ -42,5 +41,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "packageManager": "yarn@3.6.3"
 }

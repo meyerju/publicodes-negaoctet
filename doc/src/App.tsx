@@ -4,9 +4,9 @@ import { RulePage } from "publicodes-react";
 import { Link, Route, Routes, useParams } from "react-router-dom";
 import { ComponentProps, useRef } from "react";
 
-import model from "@incubateur-ademe/modele-numerique";
+import model from "./model.json";
 
-const engine = new Engine(model);
+const engine = new Engine(model as {});
 
 const baseUrl =
   process.env.NODE_ENV === "development" ? "" : "/modele-numerique";

@@ -1,5 +1,4 @@
 node_modules
-modele-numerique.model.json
-rules/index.d.ts
-rules/model.json
 .yarn
+model.json
+index.d.ts
