@@ -10,7 +10,9 @@
   ],
   "scripts": {
     "build": "yarn --cwd rules build",
-    "doc": "yarn build && yarn --cwd doc start"
+    "doc": "yarn build && yarn --cwd doc start",
+    "predeploy": "yarn run build",
+    "deploy": "cd doc && gh-pages -d build"
   },
   "repository": "git@github.com:incubateur-ademe/modele-numerique.git",
   "devDependencies": {
