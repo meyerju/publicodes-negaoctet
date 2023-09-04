@@ -59,13 +59,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  deploy_pages:
-    runs-on: ubuntu-latest
-    needs:
-      - check_if_version_upgraded
-    steps:
-      - run: yarn run doc:deploy
-
   publish_on_npm:
     runs-on: ubuntu-latest
     needs:
@@ -77,10 +70,15 @@ jobs:
           ref: ${{ github.ref }}
       - uses: actions/setup-node@v3
         with:
-          registry-url: https://registry.npmjs.org/
-      - uses: bahmutov/npm-install@v1
-      - run: cd rules
+          node-version: "18"
+          cache: "yarn"
+      - run: yarn install --immutable
+        shell: bash
       - run: yarn build
+
+      - name: Deploy doc on GitHub pages
+        run: yarn run doc:deploy
+
       - name: Publishing on NPM
         run: |
           if [ "$(npm show . version)" = "$VERSION" ]; then
