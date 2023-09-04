@@ -5,7 +5,7 @@
   "homepage": "https://incubateur-ademe.github.io/modele-numerique",
   "scripts": {
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build -u \"github-actions-bot <support+actions@github.com>\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
