@@ -72,7 +72,7 @@ jobs:
         with:
           node-version: "18"
           cache: "yarn"
-      - run: yarn install --immutable
+      - run: yarn install --immutable && yarn install --immutable --cwd doc
         shell: bash
       - run: yarn build
 

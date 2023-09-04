@@ -29,6 +29,8 @@ Pour lancer l'app React en local permettant de parcourir la documentation du
 modèle, il suffit d'exécuter la commande suivante :
 
 ```
+yarn install --cwd doc
+
 yarn run doc
 ```
 
