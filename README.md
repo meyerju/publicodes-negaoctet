@@ -8,7 +8,36 @@ ligne](https://incubateur-ademe.github.io/modele-numerique/).
 
 ## Usage
 
-### Compiler le modèle
+Ajouter le paquet à vos dépendandes : 
+```
+yarn add @incubateur-ademe/modele-numerique
+```
+
+Instancier une nouveau moteur Publicode :
+```typescript
+import Engine from 'publicodes'
+import rules from '@incubateur-ademe/modele-numerique'
+
+const engine = new Engine(rules)
+
+engine.evaluate('tablette . consommation en mode actif')
+```
+
+Utiliser certaines règles dans un autre modèle publicodes :
+```yaml
+importer!:
+  depuis:
+    nom: @incubateur-ademe/modele-numerique 
+    url: https://github.com/incubateur-ademe/modele-numerique
+  dans: modèle numérique
+  les règles:
+    - numérique . internet . consommation horaire 
+    - ordinateur portable . construction
+```
+
+### En local
+
+#### Compiler le modèle
 
 > Les règles publicodes du modèle sont disponible dans le workspace
 > [`rules/](https://github.com/incubateur-ademe/modele-numerique/tree/main/rules).
@@ -20,7 +49,7 @@ un seul fichier JSON, il suffit d'exécuter la commande suivante :
 yarn && yarn run build
 ```
 
-### Lancer la documentation
+#### Lancer la documentation
 
 > Le code de la documentation est disponible dans le workspace
 > [`doc/](https://github.com/incubateur-ademe/modele-numerique/tree/main/doc).
@@ -34,7 +63,7 @@ yarn install --cwd doc
 yarn run doc
 ```
 
-### Lancer l'API
+#### Lancer l'API
 
 > Le code de l'API est disponible dans le workspace
 > [`api/](https://github.com/incubateur-ademe/modele-numerique/tree/main/api).
@@ -51,8 +80,5 @@ yarn run api:watch
 
 ## Publier une nouvelle version
 
-Afin de publier une nouvelle version il suffit de mettre à jours la `version`
-du fichier
-[`package.json`](https://github.com/incubateur-ademe/modele-numerique/blob/main/package.json)
-et
-[`rules/package.json`](https://github.com/incubateur-ademe/modele-numerique/blob/main/rules/package.json)
+Afin de publier une nouvelle version il suffit d'exécuter la commande `npm
+version`.
