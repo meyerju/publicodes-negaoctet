@@ -1,6 +1,6 @@
 {
   "name": "@incubateur-ademe/modele-numerique",
-  "version": "0.1.12",
+  "version": "0.1.10",
   "description": "Modèle Publicodes pour calculer l'impact (en CO2eq) du numérique",
   "type": "module",
   "main": "index.js",
@@ -15,7 +15,7 @@
     "clean": "rm -r model.json index.d.ts index.js",
     "build": "node build.js",
     "doc:start": "yarn run build && cp model.json doc/src && cd doc && yarn run start",
-    "doc:deploy": "yarn run build && cp model.json doc/src && cd doc && yarn run deploy"
+    "doc:build": "yarn run build && cp model.json doc/src && cd doc && yarn run build"
   },
   "repository": "git@github.com:incubateur-ademe/modele-numerique.git",
   "homepage": "https://github.com/incubateur-ademe/modele-numerique#readme",
