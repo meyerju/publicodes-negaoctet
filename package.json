@@ -1,5 +1,6 @@
 {
   "name": "root",
+  "version": "0.1.0",
   "private": "true",
   "type": "module",
   "workspaces": [
@@ -9,7 +10,7 @@
   ],
   "scripts": {
     "build": "yarn --cwd rules build",
-    "doc:start": "yarn --cwd doc start"
+    "doc": "yarn build && yarn --cwd doc start"
   },
   "repository": "git@github.com:incubateur-ademe/modele-numerique.git",
   "devDependencies": {
