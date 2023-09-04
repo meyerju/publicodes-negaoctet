@@ -72,13 +72,8 @@ jobs:
         with:
           node-version: "18"
           cache: "yarn"
-      - run: yarn install --immutable && yarn install --immutable --cwd doc
-        shell: bash
+      - run: yarn install --immutable
       - run: yarn build
-
-      - name: Deploy doc on GitHub pages
-        run: yarn run doc:deploy
-
       - name: Publishing on NPM
         run: |
           if [ "$(npm show . version)" = "$VERSION" ]; then
