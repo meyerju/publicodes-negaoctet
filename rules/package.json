@@ -12,6 +12,7 @@
     "index.d.ts"
   ],
   "scripts": {
+    "clean": "rm model.json index.d.ts",
     "build": "node ../build.js"
   },
   "repository": "git@github.com:incubateur-ademe/modele-numerique.git",
