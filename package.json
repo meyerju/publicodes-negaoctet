@@ -7,7 +7,7 @@
   "module": "index.js",
   "types": "index.d.ts",
   "files": [
-    "model.json",
+    "modele-numerique.model.json",
     "index.js",
     "index.d.ts"
   ],
