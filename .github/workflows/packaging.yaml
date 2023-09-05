@@ -85,9 +85,9 @@ jobs:
 
   publish_on_npm:
     runs-on: ubuntu-latest
-    needs:
-      - create_github_release
-      - check_if_version_upgraded
+    # needs:
+    #   - create_github_release
+    #   - check_if_version_upgraded
     steps:
       - uses: actions/checkout@v3
         with:
@@ -98,7 +98,10 @@ jobs:
           cache: "yarn"
       - run: yarn install --immutable
       - run: yarn build
-      - id: publish
-        uses: JS-DevTools/npm-publish@v2
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - id: publish
+      #   uses: JS-DevTools/npm-publish@v2
+      #   with:
+      #     token: ${{ secrets.NPM_TOKEN }}
