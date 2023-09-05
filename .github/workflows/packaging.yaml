@@ -98,8 +98,7 @@ jobs:
           cache: "yarn"
       - run: yarn install --immutable
       - run: yarn build
-      - run: npm ci
-      - run: npm publish
+      - run: yarn publish --non-interactive --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       # - id: publish
