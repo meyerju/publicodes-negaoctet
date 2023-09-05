@@ -4,7 +4,7 @@ import { RulePage } from "publicodes-react";
 import { Link, Route, Routes, useParams } from "react-router-dom";
 import { ComponentProps, useRef } from "react";
 
-import model from "./model.json";
+import model from "./modele-numerique.model.json";
 
 const engine = new Engine(model as {});
 

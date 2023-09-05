@@ -40,7 +40,7 @@ importer!:
 #### Compiler le modèle
 
 > Les règles publicodes du modèle sont disponible dans le workspace
-> [`rules/](https://github.com/incubateur-ademe/modele-numerique/tree/main/rules).
+> [`rules/`](https://github.com/incubateur-ademe/modele-numerique/tree/main/rules).
 
 Pour installer les dépendences et compiler tous les fichiers `.publicodes` en
 un seul fichier JSON, il suffit d'exécuter la commande suivante : 
@@ -52,7 +52,7 @@ yarn && yarn run build
 #### Lancer la documentation
 
 > Le code de la documentation est disponible dans le workspace
-> [`doc/](https://github.com/incubateur-ademe/modele-numerique/tree/main/doc).
+> [`doc/`](https://github.com/incubateur-ademe/modele-numerique/tree/main/doc).
 
 Pour lancer l'app React en local permettant de parcourir la documentation du
 modèle, il suffit d'exécuter la commande suivante :
@@ -66,7 +66,7 @@ yarn run doc
 #### Lancer l'API
 
 > Le code de l'API est disponible dans le workspace
-> [`api/](https://github.com/incubateur-ademe/modele-numerique/tree/main/api).
+> [`api/`](https://github.com/incubateur-ademe/modele-numerique/tree/main/api).
 
 Pour lancer le serveur Node permettant d'utiliser l'API REST, il faut utiliser les commandes
 suivantes : 
