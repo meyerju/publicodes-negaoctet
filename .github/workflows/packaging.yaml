@@ -112,6 +112,8 @@ jobs:
           if [ "$IS_PRE_RELEASE" = "true" ]; then
               EXTRA_ARGS="--tag next"
           fi
+          echo $NODE_AUTH_TOKEN > .npmrc
+          cat .npmrc
           npm publish $EXTRA_ARGS
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
