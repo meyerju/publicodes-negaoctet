@@ -1,6 +1,6 @@
 <div align="center">
   <h3 align="center">
-	<big><code>@incubateur-ademe/publicodes-negaoctet</code></big>
+	<big>Publicodes x NegaOctet</big>
   </h3>
   <p align="center">
    <a href="https://github.com/incubateur-ademe/publicodes-negaoctet/issues">Report Bug</a>
@@ -8,15 +8,11 @@
    <a href="https://incubateur-ademe.github.io/publicodes-negaoctet/">API docs</a>
    •
    <a href="https://github.com/incubateur-ademe/publicodes-negaoctet/blob/master/CONTRIBUTING.md">Contribute</a>
-   •
-   <a href="https://publi.codes">Publicodes</a>
-   •
-   <a href="https://negaoctet.org/en/home/#Donnees">NegaOctet</a>
   </p>
 
 ![CI][ci-link] ![NPM][npm-link]
 
-Un modèle [Publicodes](https://publi.codes) autour des données du projet
+Un modèle [Publicodes](https://publi.codes) de la base de données
 [NegaOctet](https://negaoctet.org/en/home/#Donnees).
 
 Sa documentation est disponible [en
@@ -101,5 +97,5 @@ bun run api:watch
 Afin de publier une nouvelle version il suffit d'exécuter la commande `npm
 version`.
 
-[ci-link]: https://img.shields.io/github/actions/workflow/status/incubateur-ademe/publicodes-negaoctet/packaging.yml?logo=github&logoColor=white&label=build%20%26%20test
+[ci-link]: https://img.shields.io/github/actions/workflow/status/incubateur-ademe/publicodes-negaoctet/packaging.yaml?logo=github&logoColor=white&label=build%20%26%20test
 [npm-link]: https://img.shields.io/npm/v/%40incubateur-ademe%2Fpublicodes-negaoctet?logo=npm&logoColor=white&color=salmon
