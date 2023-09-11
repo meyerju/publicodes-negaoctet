@@ -4,7 +4,7 @@ import { disabledLogger } from "@incubateur-ademe/publicodes-tools";
 import Engine from "publicodes";
 
 const srcFiles = "rules/**/*.publicodes";
-const destPath = "modele-numerique.model.json";
+const destPath = "publicodes-negaoctet.model.json";
 
 const model = getModelFromSource(srcFiles, { verbose: true });
 
@@ -21,10 +21,10 @@ console.log(`✅ ${destPath} generated`);
 writeFileSync(
   "index.js",
   `
-import rules from "./modele-numerique.model.json";
+import rules from "./publicodes-negaoctet.model.json";
 
 export default rules;
-`,
+`
 );
 console.log(`✅ index.js generated`);
 
@@ -34,7 +34,7 @@ let indexDTypes = Object.keys(model).reduce(
 import { Rule } from "publicodes";
 
 export type DottedName = 
-`,
+`
 );
 
 indexDTypes += `

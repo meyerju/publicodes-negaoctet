@@ -1,7 +1,7 @@
 {
-  "name": "@incubateur-ademe/modele-numerique-api",
+  "name": "@incubateur-ademe/publicodes-negaoctet-api",
   "version": "0.1.0",
-  "description": "API pour le modèle Publicodes pour calculer l'impact (en CO2eq) du numérique",
+  "description": "API du modèle Publicodes de la base de données NegaOctet",
   "type": "module",
   "main": "index.js",
   "module": "index.js",
@@ -9,15 +9,14 @@
     "index.js"
   ],
   "scripts": {
-    "build": "node index.js"
+    "build": "bun run index.js"
   },
-  "repository": "git@github.com:incubateur-ademe/modele-numerique.git",
-  "homepage": "https://github.com/incubateur-ademe/modele-numerique#readme",
+  "repository": "git@github.com:incubateur-ademe/publicodes-negaoctet.git",
+  "homepage": "https://github.com/incubateur-ademe/publicodes-negaoctet#readme",
   "bugs": {
-    "url": "https://github.com/incubateur-ademe/modele-numerique/issues"
+    "url": "https://github.com/incubateur-ademe/publicodes-negaoctet/issues"
   },
   "authors": [
-    "Clément Auger <clement.auger@beta.gouv.fr>",
     "Emile Rolley <emile.rolley@tuta.io>"
   ],
   "license": "MIT",

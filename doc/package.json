@@ -1,8 +1,8 @@
 {
-  "name": "modele-numerique-react-doc",
+  "name": "publicodes-negaoctet-react-doc",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://incubateur-ademe.github.io/modele-numerique",
+  "homepage": "https://incubateur-ademe.github.io/publicodes-negaoctet",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -39,6 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "packageManager": "yarn@3.6.3"
+  }
 }

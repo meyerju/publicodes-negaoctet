@@ -4,12 +4,12 @@ import { RulePage } from "publicodes-react";
 import { Link, Route, Routes, useParams } from "react-router-dom";
 import { ComponentProps, useRef } from "react";
 
-import model from "./modele-numerique.model.json";
+import model from "./publicodes-negaoctet.model.json";
 
 const engine = new Engine(model as {});
 
 const baseUrl =
-  process.env.NODE_ENV === "development" ? "" : "/modele-numerique";
+  process.env.NODE_ENV === "development" ? "" : "/publicodes-negaoctet";
 
 function Documentation() {
   const url = useParams()["*"];
@@ -21,11 +21,11 @@ function Documentation() {
     <div>
       <RulePage
         documentationPath={`${baseUrl}/doc`}
-        rulePath={url ?? "numérique"}
+        rulePath={url ?? "fichier"}
         engine={engine}
         renderers={renderers}
         language={"fr"}
-        npmPackage="@incubateur-ademe/modele-numerique"
+        npmPackage="@incubateur-ademe/publicodes-negaoctet"
       />
     </div>
   );
@@ -37,7 +37,7 @@ function Landing() {
       <h1>Documentation</h1>
       <ul>
         <li>
-          <Link to={`${baseUrl}/doc/numérique`}>Modèle numérique</Link>
+          <Link to={`${baseUrl}/doc/fichier`}>Accéder à la documentation</Link>
         </li>
       </ul>
     </div>
