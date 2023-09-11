@@ -14,7 +14,7 @@
   "scripts": {
     "clean": "rm -r publicodes-negaoctet.model.json index.d.ts index.js",
     "build": "bun run build.js",
-    "doc:start": "bun run build && cp publicodes-negaoctet.model.json doc/src && cd doc && yarn run start",
+    "doc": "bun run build && cp publicodes-negaoctet.model.json doc/src && cd doc && yarn run start",
     "doc:build": "bun run build && cp publicodes-negaoctet.model.json doc/src && cd doc && yarn run build"
   },
   "repository": "git@github.com:incubateur-ademe/publicodes-negaoctet.git",

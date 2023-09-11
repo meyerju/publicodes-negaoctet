@@ -1,16 +1,34 @@
-# Modèle _Usage numérique_
+<div align="center">
+  <h3 align="center">
+	<big><code>@incubateur-ademe/publicodes-negaoctet</code></big>
+  </h3>
+  <p align="center">
+   <a href="https://github.com/incubateur-ademe/publicodes-negaoctet/issues">Report Bug</a>
+   •
+   <a href="https://incubateur-ademe.github.io/publicodes-negaoctet/">API docs</a>
+   •
+   <a href="https://github.com/incubateur-ademe/publicodes-negaoctet/blob/master/CONTRIBUTING.md">Contribute</a>
+   •
+   <a href="https://publi.codes">Publicodes</a>
+   •
+   <a href="https://negaoctet.org/en/home/#Donnees">NegaOctet</a>
+  </p>
 
-Un modèle [Publicodes](https://publi.codes) pour calculer l'impact des usages
-numérique en équivalent CO2.
+![CI][ci-link] ![NPM][npm-link]
+
+Un modèle [Publicodes](https://publi.codes) autour des données du projet
+[NegaOctet](https://negaoctet.org/en/home/#Donnees).
 
 Sa documentation est disponible [en
 ligne](https://incubateur-ademe.github.io/publicodes-negaoctet/).
+
+</div>
 
 ## Usage
 
 Ajouter le paquet à vos dépendandes : 
 ```
-yarn add @incubateur-ademe/publicodes-negaoctet
+bun add @incubateur-ademe/publicodes-negaoctet
 ```
 
 Instancier une nouveau moteur Publicode :
@@ -46,7 +64,7 @@ Pour installer les dépendences et compiler tous les fichiers `.publicodes` en
 un seul fichier JSON, il suffit d'exécuter la commande suivante : 
 
 ```
-yarn && yarn run build
+bun i && bun run build
 ```
 
 #### Lancer la documentation
@@ -58,9 +76,9 @@ Pour lancer l'app React en local permettant de parcourir la documentation du
 modèle, il suffit d'exécuter la commande suivante :
 
 ```
-yarn install --cwd doc
+bun i --cwd doc
 
-yarn run doc
+bun run doc
 ```
 
 #### Lancer l'API
@@ -72,13 +90,16 @@ Pour lancer le serveur Node permettant d'utiliser l'API REST, il faut utiliser l
 suivantes : 
 
 ```
-yarn run api
+bun run api
 
 # En watch-mode
-yarn run api:watch
+bun run api:watch
 ```
 
 ## Publier une nouvelle version
 
 Afin de publier une nouvelle version il suffit d'exécuter la commande `npm
 version`.
+
+[ci-link]: https://img.shields.io/github/actions/workflow/status/incubateur-ademe/publicodes-negaoctet/packaging.yml?logo=github&logoColor=white&label=build%20%26%20test
+[npm-link]: https://img.shields.io/npm/v/%40incubateur-ademe%2Fpublicodes-negaoctet?logo=npm&logoColor=white&color=salmon
