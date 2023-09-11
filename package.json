@@ -19,6 +19,12 @@
   },
   "repository": "git@github.com:incubateur-ademe/publicodes-negaoctet.git",
   "homepage": "https://github.com/incubateur-ademe/publicodes-negaoctet#readme",
+  "keywords": [
+    "publicodes",
+    "NegaOctet",
+    "ademe",
+    "co2"
+  ],
   "bugs": {
     "url": "https://github.com/incubateur-ademe/publicodes-negaoctet/issues"
   },

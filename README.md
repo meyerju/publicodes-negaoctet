@@ -22,12 +22,12 @@ ligne](https://incubateur-ademe.github.io/publicodes-negaoctet/).
 
 ## Usage
 
-Ajouter le paquet à vos dépendandes : 
+Ajouter le paquet à vos dépendances : 
 ```
 bun add @incubateur-ademe/publicodes-negaoctet
 ```
 
-Instancier une nouveau moteur Publicode :
+Instancier un nouveau moteur Publicode :
 ```typescript
 import Engine from 'publicodes'
 import rules from '@incubateur-ademe/publicodes-negaoctet'
