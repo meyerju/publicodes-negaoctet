@@ -67,13 +67,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Set-up Node
-        uses: actions/setup-node@v3
+      - name: Set-up bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: "18"
-          cache: "yarn"
-      - run: yarn install --immutable && yarn install --immutable --cwd doc
-      - run: yarn doc:build
+          bun-version: latest
+      - run: bun i --frozen-lockfile && bun i --frozen-lockfile --cwd doc
+      - run: bun run doc:build
       - name: Deploy
         uses: crazy-max/ghaction-github-pages@v3
         with:
@@ -98,8 +97,8 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           always-auth: true
           cache: "yarn"
-      - run: yarn install --immutable
-      - run: yarn build
+      - run: bun i --frozen-lockfile
+      - run: bun run build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
