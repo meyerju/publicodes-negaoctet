@@ -11,6 +11,8 @@ const engine = new Engine(model as {});
 const baseUrl =
   process.env.NODE_ENV === "development" ? "" : "/publicodes-negaoctet";
 
+const defaultRule = "construction-data-center";
+
 function Documentation() {
   const url = useParams()["*"];
   const { current: renderers } = useRef({
@@ -21,7 +23,7 @@ function Documentation() {
     <div>
       <RulePage
         documentationPath={`${baseUrl}/doc`}
-        rulePath={url ?? "construction-data-center"}
+        rulePath={url ?? defaultRule}
         engine={engine}
         renderers={renderers}
         language={"fr"}
@@ -37,7 +39,7 @@ function Landing() {
       <h1>Documentation</h1>
       <ul>
         <li>
-          <Link to={`${baseUrl}/doc/construction-data-center`}>
+          <Link to={`${baseUrl}/doc/${defaultRule}`}>
             Accéder à la documentation
           </Link>
         </li>
