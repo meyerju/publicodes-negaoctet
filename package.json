@@ -13,9 +13,9 @@
   ],
   "scripts": {
     "clean": "rm -r modele-numerique.model.json index.d.ts index.js",
-    "build": "node build.js",
-    "doc:start": "yarn run build && cp modele-numerique.model.json doc/src && cd doc && yarn run start",
-    "doc:build": "yarn run build && cp modele-numerique.model.json doc/src && cd doc && yarn run build"
+    "build": "bun run build.js",
+    "doc:start": "bun run build && cp modele-numerique.model.json doc/src && cd doc && yarn run start",
+    "doc:build": "bun run build && cp modele-numerique.model.json doc/src && cd doc && yarn run build"
   },
   "repository": "git@github.com:incubateur-ademe/modele-numerique.git",
   "homepage": "https://github.com/incubateur-ademe/modele-numerique#readme",
