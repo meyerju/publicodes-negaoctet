@@ -34,7 +34,7 @@ import rules from '@incubateur-ademe/publicodes-negaoctet'
 
 const engine = new Engine(rules)
 
-engine.evaluate('tablette . consommation en mode actif')
+engine.evaluate('construction data center')
 ```
 
 Utiliser certaines règles dans un autre modèle publicodes :

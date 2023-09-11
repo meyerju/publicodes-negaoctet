@@ -21,7 +21,7 @@ function Documentation() {
     <div>
       <RulePage
         documentationPath={`${baseUrl}/doc`}
-        rulePath={url ?? "fichier"}
+        rulePath={url ?? "construction-data-center"}
         engine={engine}
         renderers={renderers}
         language={"fr"}
@@ -37,7 +37,9 @@ function Landing() {
       <h1>Documentation</h1>
       <ul>
         <li>
-          <Link to={`${baseUrl}/doc/fichier`}>Accéder à la documentation</Link>
+          <Link to={`${baseUrl}/doc/construction-data-center`}>
+            Accéder à la documentation
+          </Link>
         </li>
       </ul>
     </div>
