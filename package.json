@@ -1,6 +1,6 @@
 {
   "name": "@incubateur-ademe/publicodes-negaoctet",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "description": "Modèle Publicodes de la base de données NegaOctet",
   "type": "module",
   "main": "index.js",
