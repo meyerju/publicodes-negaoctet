@@ -35,7 +35,7 @@
   "license": "MIT",
   "devDependencies": {
     "@incubateur-ademe/publicodes-commun": "^0.1.1",
-    "@incubateur-ademe/publicodes-tools": "^0.2.1",
+    "@incubateur-ademe/publicodes-tools": "latest",
     "react-scripts": "^5.0.1"
   },
   "dependencies": {
