@@ -1,3 +1,10 @@
+importer!:
+  depuis:
+    nom: "@incubateur-ademe/publicodes-commun"
+    url: https://github.com/incubateur-ademe/publicodes-commun
+  les règles:
+    - jours par an
+
 construction réelle:
   formule:
     produit:
@@ -131,7 +138,7 @@ smartphone . construction:
   unité: gCO2e
 
 smartphone . durée d'usage:
-  formule: jours par an * durée de vie * profil utilisation
+  formule: publicodes-commun . jours par an * durée de vie * profil utilisation
   unité: heure
 
 smartphone . durée de vie:
@@ -164,7 +171,7 @@ tablette . construction:
   unité: gCO2e
 
 tablette . durée d'usage:
-  formule: jours par an * durée de vie * profil utilisation
+  formule: publicodes-commun . jours par an * durée de vie * profil utilisation
   unité: heure
 
 tablette . durée de vie:
@@ -197,7 +204,7 @@ ordinateur portable . construction:
   unité: gCO2e
 
 ordinateur portable . durée d'usage:
-  formule: jours par an * durée de vie * profil utilisation
+  formule: publicodes-commun . jours par an * durée de vie * profil utilisation
   unité: heure
 
 ordinateur portable . durée de vie:
@@ -230,7 +237,7 @@ TV . construction:
   unité: gCO2e
 
 TV . durée d'usage:
-  formule: jours par an * durée de vie * profil utilisation
+  formule: publicodes-commun . jours par an * durée de vie * profil utilisation
   unité: heure
 
 TV . durée de vie:
@@ -292,7 +299,7 @@ ordinateur et écran . construction:
   unité: gCO2e
 
 ordinateur et écran . durée d'usage:
-  formule: jours par an * durée de vie * profil utilisation
+  formule: publicodes-commun . jours par an * durée de vie * profil utilisation
   unité: heure
 
 ordinateur et écran . durée de vie:
