@@ -7345,6 +7345,11 @@ publicodes@^1.0.0-beta.71:
   resolved "https://registry.yarnpkg.com/publicodes/-/publicodes-1.0.0-beta.73.tgz#a6c7766ef6cc941ddd4e4eb86914cebe9afadd2c"
   integrity sha512-AA3Z20ljTbwUrnmswx9f9rmD5OGBcWQu72yfS8VzEJbz5rMCivnFXLmjqaS026wcvKkbTDuh/qHfgMJI33B1Yw==
 
+publicodes@^1.0.0-beta.77:
+  version "1.0.0-beta.77"
+  resolved "https://registry.yarnpkg.com/publicodes/-/publicodes-1.0.0-beta.77.tgz#45e3c4d2a46bfadcc932e1405ea037e659c28134"
+  integrity sha512-F8U3WGUWMo3/rxhWYS1gWIiG20g1Yy/+PpXdHM99d6ZHKWnnyh/4txVEuyVE75glgDs+mTjwZPnmoKWsTMXluA==
+
 punycode@^2.1.0, punycode@^2.1.1:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.3.0.tgz#f67fa67c94da8f4d0cfff981aee4118064199b8f"
