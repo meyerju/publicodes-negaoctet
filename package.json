@@ -37,8 +37,7 @@
   "devDependencies": {
     "@incubateur-ademe/publicodes-commun": "^1.1.1",
     "@publicodes/tools": "^1.0.5",
-    "prettier": "^3.2.5",
-    "react-scripts": "^5.0.1"
+    "prettier": "^3.2.5"
   },
   "peerDependencies": {
     "publicodes": "^1.1.1"
