@@ -62,17 +62,15 @@ streaming . terminaux:
   unité: gCO2e
 
 streaming . terminaux . construction:
-  formule:
-    recalcul:
-      règle: construction réelle
-      avec:
-        appareil par défaut: appareil
-        durée en heure par défaut: durée en heure
-        moyenne utilisation ordinateur et écran par défaut: appareil . moyenne utilisation ordinateur et écran
-        moyenne utilisation ordinateur portable par défaut: appareil . moyenne utilisation ordinateur portable
-        moyenne utilisation tablette par défaut: appareil . moyenne utilisation tablette
-        moyenne utilisation smartphone par défaut: appareil . moyenne utilisation smartphone
-        moyenne utilisation TV par défaut: appareil . moyenne utilisation TV
+  valeur: construction réelle
+  contexte:
+    appareil par défaut: appareil
+    durée en heure par défaut: durée en heure
+    moyenne utilisation ordinateur et écran par défaut: appareil . moyenne utilisation ordinateur et écran
+    moyenne utilisation ordinateur portable par défaut: appareil . moyenne utilisation ordinateur portable
+    moyenne utilisation tablette par défaut: appareil . moyenne utilisation tablette
+    moyenne utilisation smartphone par défaut: appareil . moyenne utilisation smartphone
+    moyenne utilisation TV par défaut: appareil . moyenne utilisation TV
 
 streaming . appareil:
   titre: Appareil utilisé
@@ -102,25 +100,21 @@ streaming . appareil . moyenne utilisation smartphone: 5%
 streaming . appareil . moyenne utilisation TV: 70%
 
 streaming . terminaux . usage:
-  formule:
-    recalcul:
-      règle: usage réel
-      avec:
-        appareil par défaut: appareil
-        durée en heure par défaut: durée en heure
-        moyenne utilisation ordinateur et écran par défaut: appareil . moyenne utilisation ordinateur et écran
-        moyenne utilisation ordinateur portable par défaut: appareil . moyenne utilisation ordinateur portable
-        moyenne utilisation tablette par défaut: appareil . moyenne utilisation tablette
-        moyenne utilisation smartphone par défaut: appareil . moyenne utilisation smartphone
-        moyenne utilisation TV par défaut: appareil . moyenne utilisation TV
+  valeur: usage réel
+  contexte:
+    appareil par défaut: appareil
+    durée en heure par défaut: durée en heure
+    moyenne utilisation ordinateur et écran par défaut: appareil . moyenne utilisation ordinateur et écran
+    moyenne utilisation ordinateur portable par défaut: appareil . moyenne utilisation ordinateur portable
+    moyenne utilisation tablette par défaut: appareil . moyenne utilisation tablette
+    moyenne utilisation smartphone par défaut: appareil . moyenne utilisation smartphone
+    moyenne utilisation TV par défaut: appareil . moyenne utilisation TV
 
 streaming . transmission:
-  formule:
-    recalcul:
-      règle: transmission par défaut
-      avec:
-        transmission par défaut . taille par défaut: taille
-        transmission par défaut . réseau par défaut: réseau
+  valeur: transmission par défaut
+  contexte:
+    transmission par défaut . taille par défaut: taille
+    transmission par défaut . réseau par défaut: réseau
   unité: gCO2e
 
 streaming . transmission . réseau:
@@ -153,21 +147,17 @@ streaming . data center:
   unité: gCO2e
 
 streaming . data center . construction:
-  formule:
-    recalcul:
-      règle: construction data center
-      avec:
-        construction data center . serveur . facteur d'allocation: facteur d'allocation serveur
+  valeur: construction data center
+  contexte:
+    construction data center . serveur . facteur d'allocation: facteur d'allocation serveur
   note: Stockage négligé car divisé entre un nombre très important de visionnage
 
 streaming . data center . construction . facteur d'allocation serveur: nombre de serveurs / nombre d'heures de visionnage par an / serveur . durée de vie
 
 streaming . data center . usage:
-  formule:
-    recalcul:
-      règle: usage data center
-      avec:
-        usage data center . consommation électricité: consommation électricité
+  valeur: usage data center
+  contexte:
+    usage data center . consommation électricité: consommation électricité
   unité: gCO2e
 
 streaming . data center . usage . consommation électricité:

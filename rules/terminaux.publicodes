@@ -7,21 +7,19 @@ importer!:
 
 construction réelle:
   formule:
-    produit:
-      assiette:
-        variations:
-          - si: appareil par défaut = 'smartphone'
-            alors: smartphone
-          - si: appareil par défaut = 'tablette'
-            alors: tablette
-          - si: appareil par défaut = 'ordinateur portable'
-            alors: ordinateur portable
-          - si: appareil par défaut = 'TV'
-            alors: TV
-          - si: appareil par défaut = 'ordinateur et écran'
-            alors: ordinateur et écran
-          - si: appareil par défaut = 'moyenne'
-            alors: moyenne
+    variations:
+      - si: appareil par défaut = 'smartphone'
+        alors: smartphone
+      - si: appareil par défaut = 'tablette'
+        alors: tablette
+      - si: appareil par défaut = 'ordinateur portable'
+        alors: ordinateur portable
+      - si: appareil par défaut = 'TV'
+        alors: TV
+      - si: appareil par défaut = 'ordinateur et écran'
+        alors: ordinateur et écran
+      - si: appareil par défaut = 'moyenne'
+        alors: moyenne
   reference: |
     Les données relatives à la construction et l'amortissement des appareils sont tirés 
     de [cette étude](https://librairie.ademe.fr/dechets-economie-circulaire/1189-modelisation-et-evaluation-des-impacts-environnementaux-de-produits-de-consommation-et-biens-d-equipement.html)

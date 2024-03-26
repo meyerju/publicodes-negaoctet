@@ -19,12 +19,10 @@ fichier . taille:
   unité: Go
 
 fichier . transmission:
-  formule:
-    recalcul:
-      règle: transmission par défaut
-      avec:
-        transmission par défaut . taille par défaut: taille
-        transmission par défaut . réseau par défaut: réseau
+  valeur: transmission par défaut
+  contexte:
+    transmission par défaut . taille par défaut: taille
+    transmission par défaut . réseau par défaut: réseau
   unité: gCO2e
 
 fichier . transmission . réseau:
@@ -57,12 +55,10 @@ fichier . data center:
   unité: gCO2e
 
 fichier . data center . construction:
-  formule:
-    recalcul:
-      règle: construction data center
-      avec:
-        construction data center . serveur . facteur d'allocation: facteur allocation serveur
-        construction data center . stockage . facteur d'allocation: 0
+  valeur: construction data center
+  contexte:
+    construction data center . serveur . facteur d'allocation: facteur allocation serveur
+    construction data center . stockage . facteur d'allocation: 0
   note: Stockage non pris en compte, considérant que le fichier peut être partagé par un grand nombre de personnes
 
 fichier . data center . facteur allocation serveur:
@@ -70,11 +66,9 @@ fichier . data center . facteur allocation serveur:
   note: Idem streaming
 
 fichier . data center . usage:
-  formule:
-    recalcul:
-      règle: usage data center
-      avec:
-        usage data center . consommation électricité: consommation électricité
+  valeur: usage data center
+  contexte:
+    usage data center . consommation électricité: consommation électricité
   unité: gCO2e
   note: |
     La quantité de serveur dédié pour l'upload d'un fichier n'étant pas connue, 

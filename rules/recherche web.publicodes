@@ -90,16 +90,14 @@ recherche web . terminaux:
       - La sollicitation de l’ordinateur de l’utilisateur pendant l’affichage de la page de resultats et la consultation des resultats
 
 recherche web . terminaux . construction:
-  formule:
-    recalcul:
-      règle: construction réelle
-      avec:
-        appareil par défaut: appareil
-        durée en heure par défaut: appareil . durée totale sollicitation
-        moyenne utilisation ordinateur et écran par défaut: appareil . moyenne utilisation ordinateur et écran
-        moyenne utilisation ordinateur portable par défaut: appareil . moyenne utilisation ordinateur portable
-        moyenne utilisation tablette par défaut: appareil . moyenne utilisation tablette
-        moyenne utilisation smartphone par défaut: appareil . moyenne utilisation smartphone
+  valeur: construction réelle
+  contexte:
+    appareil par défaut: appareil
+    durée en heure par défaut: appareil . durée totale sollicitation
+    moyenne utilisation ordinateur et écran par défaut: appareil . moyenne utilisation ordinateur et écran
+    moyenne utilisation ordinateur portable par défaut: appareil . moyenne utilisation ordinateur portable
+    moyenne utilisation tablette par défaut: appareil . moyenne utilisation tablette
+    moyenne utilisation smartphone par défaut: appareil . moyenne utilisation smartphone
 
 recherche web . appareil:
   titre: Appareil utilisé
@@ -130,24 +128,20 @@ recherche web . appareil . durée totale sollicitation:
   unité: heure
 
 recherche web . terminaux . usage:
-  formule:
-    recalcul:
-      règle: usage réel
-      avec:
-        appareil par défaut: appareil
-        durée en heure par défaut: appareil . durée totale sollicitation
-        moyenne utilisation ordinateur et écran par défaut: appareil . moyenne utilisation ordinateur et écran
-        moyenne utilisation ordinateur portable par défaut: appareil . moyenne utilisation ordinateur portable
-        moyenne utilisation tablette par défaut: appareil . moyenne utilisation tablette
-        moyenne utilisation smartphone par défaut: appareil . moyenne utilisation smartphone
+  valeur: usage réel
+  contexte:
+    appareil par défaut: appareil
+    durée en heure par défaut: appareil . durée totale sollicitation
+    moyenne utilisation ordinateur et écran par défaut: appareil . moyenne utilisation ordinateur et écran
+    moyenne utilisation ordinateur portable par défaut: appareil . moyenne utilisation ordinateur portable
+    moyenne utilisation tablette par défaut: appareil . moyenne utilisation tablette
+    moyenne utilisation smartphone par défaut: appareil . moyenne utilisation smartphone
 
 recherche web . transmission:
-  formule:
-    recalcul:
-      règle: transmission par défaut
-      avec:
-        transmission par défaut . taille par défaut: (taille de la requete en Go + nombre de pages de résultats lues * taille de la page en Go)
-        transmission par défaut . réseau par défaut: réseau
+  valeur: transmission par défaut
+  contexte:
+    transmission par défaut . taille par défaut: (taille de la requete en Go + nombre de pages de résultats lues * taille de la page en Go)
+    transmission par défaut . réseau par défaut: réseau
   unité: gCO2e
   note: |
     Cette étape comprend : 
@@ -214,19 +208,15 @@ recherche web . data center . facteur d'allocation serveur:
     BioIS pour l'ADEME, 18 février 2011
 
 recherche web . data center . construction:
-  formule:
-    recalcul:
-      règle: construction data center
-      avec:
-        construction data center . serveur . facteur d'allocation: facteur d'allocation serveur
+  valeur: construction data center
+  contexte:
+    construction data center . serveur . facteur d'allocation: facteur d'allocation serveur
   note: Stockage non pris en compte, considéré mutualisé entre un très grand nombre d'utilisateurs
 
 recherche web . data center . usage:
-  formule:
-    recalcul:
-      règle: usage data center
-      avec:
-        usage data center . consommation électricité: consommation électricité
+  valeur: usage data center
+  contexte:
+    usage data center . consommation électricité: consommation électricité
   unité: gCO2e
 
 recherche web . data center . usage . consommation électricité:
@@ -238,4 +228,4 @@ recherche web . data center . usage . consommation totale serveur:
 
 recherche web . data center . usage . consommation annuelle serveur:
   formule: serveur . puissance en mode actif * 24 * 365 / 1000
-  unité: kWh / an
+  unité: kWh/an
