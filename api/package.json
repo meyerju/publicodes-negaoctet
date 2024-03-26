@@ -9,7 +9,7 @@
     "index.js"
   ],
   "scripts": {
-    "build": "bun run index.js"
+    "build": "yarn run index.js"
   },
   "repository": "git@github.com:incubateur-ademe/publicodes-negaoctet.git",
   "homepage": "https://github.com/incubateur-ademe/publicodes-negaoctet#readme",
