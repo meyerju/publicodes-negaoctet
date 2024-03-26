@@ -16,6 +16,7 @@
     "build": "node build.js",
     "doc": "yarn run build && cp publicodes-negaoctet.model.json doc/src && cd doc && yarn run start",
     "doc:build": "yarn run build && cp publicodes-negaoctet.model.json doc/src && cd doc && yarn run build"
+    "format": "prettier . --write"
   },
   "repository": "git@github.com:incubateur-ademe/publicodes-negaoctet.git",
   "homepage": "https://github.com/incubateur-ademe/publicodes-negaoctet#readme",
