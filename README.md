@@ -22,12 +22,14 @@ ligne](https://incubateur-ademe.github.io/publicodes-negaoctet/).
 
 ## Usage
 
-Ajouter le paquet à vos dépendances : 
+Ajouter le paquet à vos dépendances :
+
 ```
-bun add @incubateur-ademe/publicodes-negaoctet
+yarn add @incubateur-ademe/publicodes-negaoctet
 ```
 
 Instancier un nouveau moteur Publicode :
+
 ```typescript
 import Engine from 'publicodes'
 import rules from '@incubateur-ademe/publicodes-negaoctet'
@@ -38,14 +40,15 @@ engine.evaluate('construction data center')
 ```
 
 Utiliser certaines règles dans un autre modèle publicodes :
+
 ```yaml
 importer!:
   depuis:
-    nom: @incubateur-ademe/publicodes-negaoctet 
+    nom: @incubateur-ademe/publicodes-negaoctet
     url: https://github.com/incubateur-ademe/publicodes-negaoctet
   dans: modèle numérique
   les règles:
-    - numérique . internet . consommation horaire 
+    - numérique . internet . consommation horaire
     - ordinateur portable . construction
 ```
 
@@ -56,11 +59,11 @@ importer!:
 > Les règles publicodes du modèle sont disponible dans le workspace
 > [`rules/`](https://github.com/incubateur-ademe/publicodes-negaoctet/tree/main/rules).
 
-Pour installer les dépendences et compiler tous les fichiers `.publicodes` en
-un seul fichier JSON, il suffit d'exécuter la commande suivante : 
+Pour installer les dépendances et compiler tous les fichiers `.publicodes` en
+un seul fichier JSON, il suffit d'exécuter la commande suivante :
 
 ```
-bun i && bun run build
+yarn && yarn run build
 ```
 
 #### Lancer la documentation
@@ -72,9 +75,9 @@ Pour lancer l'app React en local permettant de parcourir la documentation du
 modèle, il suffit d'exécuter la commande suivante :
 
 ```
-bun i --cwd doc
+yarn i --cwd doc
 
-bun run doc
+yarn run doc
 ```
 
 #### Lancer l'API
@@ -83,13 +86,13 @@ bun run doc
 > [`api/`](https://github.com/incubateur-ademe/publicodes-negaoctet/tree/main/api).
 
 Pour lancer le serveur Node permettant d'utiliser l'API REST, il faut utiliser les commandes
-suivantes : 
+suivantes :
 
 ```
-bun run api
+yarn run api
 
 # En watch-mode
-bun run api:watch
+yarn run api:watch
 ```
 
 ## Publier une nouvelle version
