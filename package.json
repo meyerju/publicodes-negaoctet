@@ -13,9 +13,10 @@
   ],
   "scripts": {
     "clean": "rm -r publicodes-negaoctet.model.json index.d.ts index.js",
-    "build": "bun run build.js",
-    "doc": "bun run build && cp publicodes-negaoctet.model.json doc/src && cd doc && bun run start",
-    "doc:build": "bun run build && cp publicodes-negaoctet.model.json doc/src && cd doc && bun run build"
+    "build": "node build.js",
+    "doc": "yarn run build && cp publicodes-negaoctet.model.json doc/src && cd doc && yarn run start",
+    "doc:build": "yarn run build && cp publicodes-negaoctet.model.json doc/src && cd doc && yarn run build",
+    "format": "prettier . --write"
   },
   "repository": "git@github.com:incubateur-ademe/publicodes-negaoctet.git",
   "homepage": "https://github.com/incubateur-ademe/publicodes-negaoctet#readme",
@@ -34,12 +35,12 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@incubateur-ademe/publicodes-commun": "^0.1.1",
-    "@incubateur-ademe/publicodes-tools": "latest",
-    "react-scripts": "^5.0.1"
+    "@incubateur-ademe/publicodes-commun": "^1.1.2",
+    "@publicodes/tools": "^1.0.7",
+    "prettier": "^3.2.5"
   },
-  "dependencies": {
-    "publicodes": "^1.0.0-beta.77"
+  "peerDependencies": {
+    "publicodes": "^1.1.1"
   },
   "publishConfig": {
     "access": "public"

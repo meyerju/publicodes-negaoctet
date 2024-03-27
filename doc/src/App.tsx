@@ -1,25 +1,25 @@
-import Engine from "publicodes";
-import "./App.css";
-import { RulePage } from "publicodes-react";
-import { Link, Route, Routes, useParams } from "react-router-dom";
-import { ComponentProps, useRef } from "react";
-import ReactMardown from "react-markdown";
+import Engine from 'publicodes'
+import './App.css'
+import { RulePage } from '@publicodes/react-ui'
+import { Link, Route, Routes, useParams } from 'react-router-dom'
+import { ComponentProps, useRef } from 'react'
+import ReactMardown from 'react-markdown'
 
-import model from "./publicodes-negaoctet.model.json";
+import model from './publicodes-negaoctet.model.json'
 
-const engine = new Engine(model as {});
+const engine = new Engine(model as {})
 
 const baseUrl =
-  process.env.NODE_ENV === "development" ? "" : "/publicodes-negaoctet";
+  process.env.NODE_ENV === 'development' ? '' : '/publicodes-negaoctet'
 
-const defaultRule = "construction-data-center";
+const defaultRule = 'construction-data-center'
 
 function Documentation() {
-  const url = useParams()["*"];
+  const url = useParams()['*']
   const { current: renderers } = useRef({
     Link,
-    Text: ({ children }) => <ReactMardown children={children} />,
-  } as ComponentProps<typeof RulePage>["renderers"]);
+    Text: ({ children }) => <ReactMardown children={children} />
+  } as ComponentProps<typeof RulePage>['renderers'])
 
   return (
     <div>
@@ -28,11 +28,11 @@ function Documentation() {
         rulePath={url ?? defaultRule}
         engine={engine}
         renderers={renderers}
-        language={"fr"}
+        language={'fr'}
         npmPackage="@incubateur-ademe/publicodes-negaoctet"
       />
     </div>
-  );
+  )
 }
 
 function Landing() {
@@ -47,12 +47,12 @@ function Landing() {
         </li>
       </ul>
     </div>
-  );
+  )
 }
 
 export default function App() {
-  console.log("baseURl:", baseUrl);
-  console.log("rules:", Object.keys(model));
+  console.log('baseURl:', baseUrl)
+  console.log('rules:', Object.keys(model))
   return (
     <div className="App">
       <Routes>
@@ -60,5 +60,5 @@ export default function App() {
         <Route path={`${baseUrl}/doc/*`} element={<Documentation />} />
       </Routes>
     </div>
-  );
+  )
 }
