@@ -132,7 +132,19 @@ moyenne utilisation TV par défaut:
 
 smartphone:
 smartphone . construction:
-  formule: 30526
+  formule: 83000
+  unité: gCO2e
+
+smartphone . distribution:
+  formule: 2100
+  unité: gCO2e
+
+smartphone . usage:
+  formule: 600
+  unité: gCO2e
+
+smartphone . fin de vie:
+  formule: 200
   unité: gCO2e
 
 smartphone . durée d'usage:
@@ -165,7 +177,19 @@ smartphone . consommation en mode actif:
 
 tablette:
 tablette . construction:
-  formule: 44500
+  formule: 56300
+  unité: gCO2e
+
+tablette . distribution:
+  formule: 3400
+  unité: gCO2e
+
+tablette . usage:
+  formule: 3200
+  unité: gCO2e
+
+tablette . fin de vie:
+  formule: 400
   unité: gCO2e
 
 tablette . durée d'usage:
@@ -198,7 +222,7 @@ tablette . consommation en mode actif:
 
 ordinateur portable:
 ordinateur portable . construction:
-  formule: 134700
+  formule: 170300
   unité: gCO2e
 
 ordinateur portable . durée d'usage:
@@ -231,7 +255,19 @@ ordinateur portable . consommation en mode actif:
 
 TV:
 TV . construction:
-  formule: 349870
+  formule: 372600
+  unité: gCO2e
+
+TV . distribution:
+  formule: 3200
+  unité: gCO2e
+
+TV . usage:
+  formule: 92700
+  unité: gCO2e
+
+TV . fin de vie:
+  formule: 11800
   unité: gCO2e
 
 TV . durée d'usage:
@@ -264,7 +300,19 @@ TV . consommation en mode actif:
 
 ordinateur fixe:
 ordinateur fixe . construction:
-  formule: 169080
+  formule: 202600
+  unité: gCO2e
+
+ordinateur fixe . distribution:
+  formule: 2900
+  unité: gCO2e
+
+ordinateur fixe . usage:
+  formule: 34100
+  unité: gCO2e
+
+ordinateur fixe . fin de vie:
+  formule: 6600
   unité: gCO2e
 
 ordinateur fixe . durée de vie par défaut:
@@ -277,7 +325,19 @@ ordinateur fixe . consommation en mode actif:
 
 écran:
 écran . construction:
-  formule: 247840
+  formule: 64600
+  unité: gCO2e
+
+écran . distribution:
+  formule: 1300
+  unité: gCO2e
+
+écran . usage:
+  formule: 23900
+  unité: gCO2e
+
+écran . fin de vie:
+  formule: 3900
   unité: gCO2e
 
 écran . durée de vie par défaut:
