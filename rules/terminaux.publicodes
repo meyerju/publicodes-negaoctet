@@ -91,15 +91,15 @@ usage réel . consommation électricité par heure:
   formule:
     variations:
       - si: appareil par défaut = 'smartphone'
-        alors: smartphone . consommation en mode actif
+        alors: acv . smartphone . consommation en mode actif
       - si: appareil par défaut = 'tablette'
-        alors: tablette . consommation en mode actif
+        alors: acv . tablette . consommation en mode actif
       - si: appareil par défaut = 'ordinateur portable'
-        alors: ordinateur portable . consommation en mode actif
+        alors: acv . ordinateur portable . consommation en mode actif
       - si: appareil par défaut = 'ordinateur et écran'
         alors: ordinateur et écran . consommation en mode actif
       - si: appareil par défaut = 'TV'
-        alors: TV . consommation en mode actif
+        alors: acv . TV . consommation en mode actif
       - sinon: consommation en mode actif moyenne
   unité: Wh
 
@@ -107,10 +107,10 @@ usage réel . consommation en mode actif moyenne:
   formule:
     somme:
       - moyenne utilisation ordinateur et écran par défaut * ordinateur et écran . consommation en mode actif
-      - moyenne utilisation ordinateur portable par défaut * ordinateur portable . consommation en mode actif
-      - moyenne utilisation tablette par défaut * tablette . consommation en mode actif
-      - moyenne utilisation smartphone par défaut * smartphone . consommation en mode actif
-      - moyenne utilisation TV par défaut * TV . consommation en mode actif
+      - moyenne utilisation ordinateur portable par défaut * acv . ordinateur portable . consommation en mode actif
+      - moyenne utilisation tablette par défaut * acv . tablette . consommation en mode actif
+      - moyenne utilisation smartphone par défaut * acv . smartphone . consommation en mode actif
+      - moyenne utilisation TV par défaut * acv . TV . consommation en mode actif
 
 appareil par défaut:
   par défaut: "'moyenne'"
@@ -147,15 +147,7 @@ smartphone . profil utilisation:
   titre: Profil d'utilisation smartphone
   question: Quelle est le profil d'utilisation du smartphone ?
   unité: heure/jour
-  par défaut: smartphone . profil utilisation par défaut
-
-smartphone . profil utilisation par défaut:
-  formule: 3
-  unité: heure/jour
-
-smartphone . consommation en mode actif:
-  formule: 5.6
-  unité: Wh
+  par défaut: acv . smartphone . profil utilisation théorique
 
 tablette:
 tablette . construction:
@@ -176,15 +168,7 @@ tablette . profil utilisation:
   titre: Profil d'utilisation tablette
   question: Quelle est le profil d'utilisation de la tablette ?
   unité: heure/jour
-  par défaut: tablette . profil utilisation par défaut
-
-tablette . profil utilisation par défaut:
-  formule: 3
-  unité: heure/jour
-
-tablette . consommation en mode actif:
-  formule: 15
-  unité: Wh
+  par défaut: acv . tablette . profil utilisation théorique
 
 ordinateur portable:
 ordinateur portable . construction:
@@ -205,15 +189,7 @@ ordinateur portable . profil utilisation:
   titre: Profil d'utilisation ordinateur portable
   question: Quelle est le profil d'utilisation de l'ordinateur portable ?
   unité: heure/jour
-  par défaut: ordinateur portable . profil utilisation par défaut
-
-ordinateur portable . profil utilisation par défaut:
-  formule: 3
-  unité: heure/jour
-
-ordinateur portable . consommation en mode actif:
-  formule: 25
-  unité: Wh
+  par défaut: acv . ordinateur portable . profil utilisation théorique
 
 TV:
 TV . construction:
@@ -234,33 +210,17 @@ TV . profil utilisation:
   titre: Profil d'utilisation TV
   question: Quelle est le profil d'utilisation de la TV ?
   unité: heure/jour
-  par défaut: TV . profil utilisation par défaut
-
-TV . profil utilisation par défaut:
-  formule: 3
-  unité: heure/jour
-
-TV . consommation en mode actif:
-  formule: 65
-  unité: Wh
+  par défaut: acv . TV . profil utilisation théorique
 
 ordinateur fixe:
 ordinateur fixe . construction:
   formule: acv . ordinateur fixe . fabrication + acv . ordinateur fixe . distribution
   unité: gCO2e
 
-ordinateur fixe . consommation en mode actif:
-  formule: 50
-  unité: Wh
-
 écran:
 écran . construction:
   formule: acv . écran . fabrication + acv . écran . distribution
   unité: gCO2e
-
-écran . consommation en mode actif:
-  formule: 30
-  unité: Wh
 
 ordinateur et écran:
 ordinateur et écran . construction:
@@ -287,15 +247,18 @@ ordinateur et écran . profil utilisation:
   titre: Profil d'utilisation ordinateur et écran
   question: Quelle est le profil d'utilisation de l'ordinateur et écran ?
   unité: heure/jour
-  par défaut: ordinateur et écran . profil utilisation par défaut
+  par défaut: ordinateur et écran . profil utilisation théorique
 
-ordinateur et écran . profil utilisation par défaut:
-  formule: 3
+ordinateur et écran . profil utilisation théorique:
+  formule:
+    moyenne:
+      - acv . ordinateur fixe . profil utilisation théorique
+      - acv . écran . profil utilisation théorique
   unité: heure/jour
 
 ordinateur et écran . consommation en mode actif:
   formule:
     somme:
-      - ordinateur fixe . consommation en mode actif
-      - écran . consommation en mode actif
+      - acv . ordinateur fixe . consommation en mode actif
+      - acv . écran . consommation en mode actif
   unité: Wh

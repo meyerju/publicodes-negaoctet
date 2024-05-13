@@ -1,20 +1,4 @@
 acv:
-acv . TV:
-acv . TV . fabrication:
-  formule: 372600
-  unité: gCO2e
-acv . TV . distribution:
-  formule: 3200
-  unité: gCO2e
-acv . TV . usage théorique:
-  formule: 92700
-  unité: gCO2e
-acv . TV . fin de vie:
-  formule: 11800
-  unité: gCO2e
-acv . TV . durée de vie théorique:
-  formule: 8
-  unité: an
 
 acv . smartphone:
 acv . smartphone . fabrication:
@@ -32,6 +16,12 @@ acv . smartphone . fin de vie:
 acv . smartphone . durée de vie théorique:
   formule: 2.5
   unité: an
+acv . smartphone . consommation en mode actif:
+  formule: 5.6
+  unité: Wh
+acv . smartphone . profil utilisation théorique:
+  formule: 3
+  unité: heure/jour
 
 acv . tablette:
 acv . tablette . fabrication:
@@ -49,6 +39,12 @@ acv . tablette . fin de vie:
 acv . tablette . durée de vie théorique:
   formule: 3
   unité: an
+acv . tablette . consommation en mode actif:
+  formule: 15
+  unité: Wh
+acv . tablette . profil utilisation théorique:
+  formule: 3
+  unité: heure/jour
 
 acv . ordinateur portable:
 acv . ordinateur portable . fabrication:
@@ -66,6 +62,35 @@ acv . ordinateur portable . fin de vie:
 acv . ordinateur portable . durée de vie théorique:
   formule: 5
   unité: an
+acv . ordinateur portable . consommation en mode actif:
+  formule: 25
+  unité: Wh
+acv . ordinateur portable . profil utilisation théorique:
+  formule: 3
+  unité: heure/jour
+
+acv . TV:
+acv . TV . fabrication:
+  formule: 372600
+  unité: gCO2e
+acv . TV . distribution:
+  formule: 3200
+  unité: gCO2e
+acv . TV . usage théorique:
+  formule: 92700
+  unité: gCO2e
+acv . TV . fin de vie:
+  formule: 11800
+  unité: gCO2e
+acv . TV . durée de vie théorique:
+  formule: 8
+  unité: an
+acv . TV . consommation en mode actif:
+  formule: 65
+  unité: Wh
+acv . TV . profil utilisation théorique:
+  formule: 3
+  unité: heure/jour
 
 acv . ordinateur fixe:
 acv . ordinateur fixe . fabrication:
@@ -83,6 +108,12 @@ acv . ordinateur fixe . fin de vie:
 acv . ordinateur fixe . durée de vie théorique:
   formule: 6
   unité: an
+acv . ordinateur fixe . consommation en mode actif:
+  formule: 50
+  unité: Wh
+acv . ordinateur fixe . profil utilisation théorique:
+  formule: 3
+  unité: heure/jour
 
 acv . écran:
 acv . écran . fabrication:
@@ -100,3 +131,9 @@ acv . écran . fin de vie:
 acv . écran . durée de vie théorique:
   formule: 6
   unité: an
+acv . écran . consommation en mode actif:
+  formule: 30
+  unité: Wh
+acv . écran . profil utilisation théorique:
+  formule: 3
+  unité: heure/jour
