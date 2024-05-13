@@ -14,6 +14,7 @@
   "scripts": {
     "clean": "rm -r publicodes-negaoctet.model.json index.d.ts index.js",
     "build": "node build.js",
+    "build:watch": "nodemon -e \"publicodes\" --watch rules/ build.js & nodemon --watch publicodes-negaoctet.model.json copy.js",
     "doc": "yarn run build && cp publicodes-negaoctet.model.json doc/src && cd doc && yarn run start",
     "doc:build": "yarn run build && cp publicodes-negaoctet.model.json doc/src && cd doc && yarn run build",
     "format": "prettier . --write"
