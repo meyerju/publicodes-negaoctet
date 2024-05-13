@@ -7,8 +7,11 @@ acv . smartphone . fabrication:
 acv . smartphone . distribution:
   formule: 2100
   unité: gCO2e
-acv . smartphone . usage théorique:
+acv . smartphone . usage julia:
   formule: 600
+  unité: gCO2e
+acv . smartphone . usage théorique:
+  formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
   unité: gCO2e
 acv . smartphone . fin de vie:
   formule: 200
@@ -21,7 +24,10 @@ acv . smartphone . consommation en mode actif:
   unité: Wh
 acv . smartphone . profil utilisation théorique:
   formule: 3
-  unité: heure/jour
+  unité: h/jour
+acv . smartphone . consommation annuelle:
+  formule: consommation en mode actif * profil utilisation théorique * publicodes-commun . jours par an / 1000
+  unité: kWh
 
 acv . tablette:
 acv . tablette . fabrication:
@@ -30,8 +36,11 @@ acv . tablette . fabrication:
 acv . tablette . distribution:
   formule: 3400
   unité: gCO2e
-acv . tablette . usage théorique:
+acv . tablette . usage julia:
   formule: 3200
+  unité: gCO2e
+acv . tablette . usage théorique:
+  formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
   unité: gCO2e
 acv . tablette . fin de vie:
   formule: 400
@@ -45,6 +54,9 @@ acv . tablette . consommation en mode actif:
 acv . tablette . profil utilisation théorique:
   formule: 3
   unité: heure/jour
+acv . tablette . consommation annuelle:
+  formule: consommation en mode actif * profil utilisation théorique * publicodes-commun . jours par an / 1000
+  unité: kWh
 
 acv . ordinateur portable:
 acv . ordinateur portable . fabrication:
@@ -53,8 +65,11 @@ acv . ordinateur portable . fabrication:
 acv . ordinateur portable . distribution:
   formule: 12300
   unité: gCO2e
-acv . ordinateur portable . usage théorique:
+acv . ordinateur portable . usage julia:
   formule: 8300
+  unité: gCO2e
+acv . ordinateur portable . usage théorique:
+  formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
   unité: gCO2e
 acv . ordinateur portable . fin de vie:
   formule: 2800
@@ -68,6 +83,9 @@ acv . ordinateur portable . consommation en mode actif:
 acv . ordinateur portable . profil utilisation théorique:
   formule: 3
   unité: heure/jour
+acv . ordinateur portable . consommation annuelle:
+  formule: consommation en mode actif * profil utilisation théorique * publicodes-commun . jours par an / 1000
+  unité: kWh
 
 acv . TV:
 acv . TV . fabrication:
@@ -76,8 +94,11 @@ acv . TV . fabrication:
 acv . TV . distribution:
   formule: 3200
   unité: gCO2e
-acv . TV . usage théorique:
+acv . TV . usage julia:
   formule: 92700
+  unité: gCO2e
+acv . TV . usage théorique:
+  formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
   unité: gCO2e
 acv . TV . fin de vie:
   formule: 11800
@@ -91,6 +112,9 @@ acv . TV . consommation en mode actif:
 acv . TV . profil utilisation théorique:
   formule: 3
   unité: heure/jour
+acv . TV . consommation annuelle:
+  formule: consommation en mode actif * profil utilisation théorique * publicodes-commun . jours par an / 1000
+  unité: kWh
 
 acv . ordinateur fixe:
 acv . ordinateur fixe . fabrication:
@@ -99,8 +123,11 @@ acv . ordinateur fixe . fabrication:
 acv . ordinateur fixe . distribution:
   formule: 2900
   unité: gCO2e
-acv . ordinateur fixe . usage théorique:
+acv . ordinateur fixe . usage julia:
   formule: 34100
+  unité: gCO2e
+acv . ordinateur fixe . usage théorique:
+  formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
   unité: gCO2e
 acv . ordinateur fixe . fin de vie:
   formule: 6600
@@ -114,6 +141,9 @@ acv . ordinateur fixe . consommation en mode actif:
 acv . ordinateur fixe . profil utilisation théorique:
   formule: 3
   unité: heure/jour
+acv . ordinateur fixe . consommation annuelle:
+  formule: consommation en mode actif * profil utilisation théorique * publicodes-commun . jours par an / 1000
+  unité: kWh
 
 acv . écran:
 acv . écran . fabrication:
@@ -122,8 +152,11 @@ acv . écran . fabrication:
 acv . écran . distribution:
   formule: 1300
   unité: gCO2e
-acv . écran . usage théorique:
+acv . écran . usage julia:
   formule: 23900
+  unité: gCO2e
+acv . écran . usage théorique:
+  formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
   unité: gCO2e
 acv . écran . fin de vie:
   formule: 3900
@@ -137,3 +170,6 @@ acv . écran . consommation en mode actif:
 acv . écran . profil utilisation théorique:
   formule: 3
   unité: heure/jour
+acv . écran . consommation annuelle:
+  formule: consommation en mode actif * profil utilisation théorique * publicodes-commun . jours par an / 1000
+  unité: kWh
