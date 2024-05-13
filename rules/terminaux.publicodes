@@ -1,6 +1,6 @@
 importer!:
   depuis:
-    nom: "@incubateur-ademe/publicodes-commun"
+    nom: '@incubateur-ademe/publicodes-commun'
     url: https://github.com/incubateur-ademe/publicodes-commun
   les règles:
     - jours par an
@@ -21,9 +21,7 @@ construction réelle:
       - si: appareil par défaut = 'moyenne'
         alors: moyenne
   reference: |
-    Les données relatives à la construction et l'amortissement des appareils sont tirés 
-    de [cette étude](https://librairie.ademe.fr/dechets-economie-circulaire/1189-modelisation-et-evaluation-des-impacts-environnementaux-de-produits-de-consommation-et-biens-d-equipement.html)
-    (facteurs d'émission, durée de vie)
+    Les données relatives à la construction et l'amortissement des appareils sont tirées du dernier excel Negaoctet disponible dans la Base Impact.
   unité: gCO2e
 
 construction réelle . moyenne:
@@ -132,7 +130,7 @@ moyenne utilisation TV par défaut:
 
 smartphone:
 smartphone . construction:
-  formule: 30526
+  formule: acv . smartphone . fabrication + acv . smartphone . distribution
   unité: gCO2e
 
 smartphone . durée d'usage:
@@ -143,11 +141,7 @@ smartphone . durée de vie:
   titre: Durée de vie smartphone
   question: Quelle est la durée de vie du smartphone ?
   unité: an
-  par défaut: smartphone . durée de vie par défaut
-
-smartphone . durée de vie par défaut:
-  par défaut: 4
-  unité: an
+  par défaut: acv . smartphone . durée de vie théorique
 
 smartphone . profil utilisation:
   titre: Profil d'utilisation smartphone
@@ -165,7 +159,7 @@ smartphone . consommation en mode actif:
 
 tablette:
 tablette . construction:
-  formule: 44500
+  formule: acv . tablette . fabrication + acv . tablette . distribution
   unité: gCO2e
 
 tablette . durée d'usage:
@@ -176,11 +170,7 @@ tablette . durée de vie:
   titre: Durée de vie tablette
   question: Quelle est la durée de vie de la tablette ?
   unité: an
-  par défaut: tablette . durée de vie par défaut
-
-tablette . durée de vie par défaut:
-  par défaut: 3
-  unité: an
+  par défaut: acv . tablette . durée de vie théorique
 
 tablette . profil utilisation:
   titre: Profil d'utilisation tablette
@@ -198,7 +188,7 @@ tablette . consommation en mode actif:
 
 ordinateur portable:
 ordinateur portable . construction:
-  formule: 134700
+  formule: acv . ordinateur portable . fabrication + acv . ordinateur portable . distribution
   unité: gCO2e
 
 ordinateur portable . durée d'usage:
@@ -209,11 +199,7 @@ ordinateur portable . durée de vie:
   titre: Durée de vie ordinateur portable
   question: Quelle est la durée de vie de l'ordinateur portable ?
   unité: an
-  par défaut: ordinateur portable . durée de vie par défaut
-
-ordinateur portable . durée de vie par défaut:
-  par défaut: 6
-  unité: an
+  par défaut: acv . ordinateur portable . durée de vie théorique
 
 ordinateur portable . profil utilisation:
   titre: Profil d'utilisation ordinateur portable
@@ -231,7 +217,7 @@ ordinateur portable . consommation en mode actif:
 
 TV:
 TV . construction:
-  formule: 349870
+  formule: acv . TV . fabrication + acv . TV . distribution
   unité: gCO2e
 
 TV . durée d'usage:
@@ -242,11 +228,7 @@ TV . durée de vie:
   titre: Durée de vie TV
   question: Quelle est la durée de vie de la TV ?
   unité: an
-  par défaut: TV . durée de vie par défaut
-
-TV . durée de vie par défaut:
-  par défaut: 8
-  unité: an
+  par défaut: acv . TV . durée de vie théorique
 
 TV . profil utilisation:
   titre: Profil d'utilisation TV
@@ -264,12 +246,8 @@ TV . consommation en mode actif:
 
 ordinateur fixe:
 ordinateur fixe . construction:
-  formule: 169080
+  formule: acv . ordinateur fixe . fabrication + acv . ordinateur fixe . distribution
   unité: gCO2e
-
-ordinateur fixe . durée de vie par défaut:
-  par défaut: 6
-  unité: an
 
 ordinateur fixe . consommation en mode actif:
   formule: 50
@@ -277,12 +255,8 @@ ordinateur fixe . consommation en mode actif:
 
 écran:
 écran . construction:
-  formule: 247840
+  formule: acv . écran . fabrication + acv . écran . distribution
   unité: gCO2e
-
-écran . durée de vie par défaut:
-  par défaut: 6
-  unité: an
 
 écran . consommation en mode actif:
   formule: 30
@@ -304,11 +278,10 @@ ordinateur et écran . durée de vie:
   titre: Durée de vie ordinateur et écran
   question: Quelle est la durée de vie de votre ordinateur et écran ?
   unité: an
-  par défaut: ordinateur et écran . durée de vie par défaut
-
-ordinateur et écran . durée de vie par défaut:
-  par défaut: (ordinateur fixe . durée de vie par défaut + écran . durée de vie par défaut) / 2
-  unité: an
+  par défaut:
+    moyenne:
+      - acv . ordinateur fixe . durée de vie théorique
+      - acv . écran . durée de vie théorique
 
 ordinateur et écran . profil utilisation:
   titre: Profil d'utilisation ordinateur et écran

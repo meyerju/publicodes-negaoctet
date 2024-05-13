@@ -1,0 +1,102 @@
+acv:
+acv . TV:
+acv . TV . fabrication:
+  formule: 372600
+  unité: gCO2e
+acv . TV . distribution:
+  formule: 3200
+  unité: gCO2e
+acv . TV . usage théorique:
+  formule: 92700
+  unité: gCO2e
+acv . TV . fin de vie:
+  formule: 11800
+  unité: gCO2e
+acv . TV . durée de vie théorique:
+  formule: 8
+  unité: an
+
+acv . smartphone:
+acv . smartphone . fabrication:
+  formule: 83000
+  unité: gCO2e
+acv . smartphone . distribution:
+  formule: 2100
+  unité: gCO2e
+acv . smartphone . usage théorique:
+  formule: 600
+  unité: gCO2e
+acv . smartphone . fin de vie:
+  formule: 200
+  unité: gCO2e
+acv . smartphone . durée de vie théorique:
+  formule: 2.5
+  unité: an
+
+acv . tablette:
+acv . tablette . fabrication:
+  formule: 56300
+  unité: gCO2e
+acv . tablette . distribution:
+  formule: 3400
+  unité: gCO2e
+acv . tablette . usage théorique:
+  formule: 3200
+  unité: gCO2e
+acv . tablette . fin de vie:
+  formule: 400
+  unité: gCO2e
+acv . tablette . durée de vie théorique:
+  formule: 3
+  unité: an
+
+acv . ordinateur portable:
+acv . ordinateur portable . fabrication:
+  formule: 170300
+  unité: gCO2e
+acv . ordinateur portable . distribution:
+  formule: 12300
+  unité: gCO2e
+acv . ordinateur portable . usage théorique:
+  formule: 8300
+  unité: gCO2e
+acv . ordinateur portable . fin de vie:
+  formule: 2800
+  unité: gCO2e
+acv . ordinateur portable . durée de vie théorique:
+  formule: 5
+  unité: an
+
+acv . ordinateur fixe:
+acv . ordinateur fixe . fabrication:
+  formule: 258600
+  unité: gCO2e
+acv . ordinateur fixe . distribution:
+  formule: 2900
+  unité: gCO2e
+acv . ordinateur fixe . usage théorique:
+  formule: 34100
+  unité: gCO2e
+acv . ordinateur fixe . fin de vie:
+  formule: 6600
+  unité: gCO2e
+acv . ordinateur fixe . durée de vie théorique:
+  formule: 6
+  unité: an
+
+acv . écran:
+acv . écran . fabrication:
+  formule: 64600
+  unité: gCO2e
+acv . écran . distribution:
+  formule: 1300
+  unité: gCO2e
+acv . écran . usage théorique:
+  formule: 23900
+  unité: gCO2e
+acv . écran . fin de vie:
+  formule: 3900
+  unité: gCO2e
+acv . écran . durée de vie théorique:
+  formule: 6
+  unité: an
