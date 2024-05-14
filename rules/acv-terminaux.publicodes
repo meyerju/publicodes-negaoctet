@@ -188,3 +188,138 @@ acv . écran . profil utilisation théorique:
 acv . écran . consommation annuelle:
   formule: consommation en mode actif * profil utilisation théorique * publicodes-commun . jours par an / 1000
   unité: kWh
+
+acv . casque:
+  titre: Casque de réalité virtuelle
+  description: |
+    Moyenne de deux technologies (50% LCD, 50%OLED) + prise en compte de deux manettes
+acv . casque . fabrication:
+  formule: 70400
+  unité: gCO2e
+acv . casque . distribution:
+  formule: 400
+  unité: gCO2e
+acv . casque . usage théorique:
+  formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
+  unité: gCO2e
+acv . casque . fin de vie:
+  formule: 1300
+  unité: gCO2e
+acv . casque . durée de vie théorique:
+  formule: 5
+  unité: an
+acv . casque . consommation en mode actif:
+  formule: 2
+  unité: Wh
+acv . casque . profil utilisation théorique:
+  formule: 3
+  unité: heure/jour
+acv . casque . consommation annuelle:
+  formule: consommation en mode actif * profil utilisation théorique * publicodes-commun . jours par an / 1000
+  unité: kWh
+
+acv . enceinte:
+  titre: Enceinte connectée
+acv . enceinte . fabrication:
+  formule: 19500
+  unité: gCO2e
+acv . enceinte . distribution:
+  formule: 300
+  unité: gCO2e
+acv . enceinte . usage théorique:
+  formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
+  unité: gCO2e
+acv . enceinte . fin de vie:
+  formule: 700
+  unité: gCO2e
+acv . enceinte . durée de vie théorique:
+  formule: 5
+  unité: an
+acv . enceinte . consommation en mode actif:
+  formule: 20
+  unité: Wh
+acv . enceinte . profil utilisation théorique:
+  formule: 3
+  unité: heure/jour
+acv . enceinte . consommation annuelle:
+  formule: consommation en mode actif * profil utilisation théorique * publicodes-commun . jours par an / 1000
+  unité: kWh
+
+acv . console de salon:
+acv . console de salon . fabrication:
+  formule: 279000
+  unité: gCO2e
+acv . console de salon . distribution:
+  formule: 1200
+  unité: gCO2e
+acv . console de salon . usage théorique:
+  formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
+  unité: gCO2e
+acv . console de salon . fin de vie:
+  formule: 4600
+  unité: gCO2e
+acv . console de salon . durée de vie théorique:
+  formule: 6
+  unité: an
+acv . console de salon . consommation en mode actif:
+  formule: 80
+  unité: Wh
+acv . console de salon . profil utilisation théorique:
+  formule: 1
+  unité: heure/jour
+acv . console de salon . consommation annuelle:
+  formule: consommation en mode actif * profil utilisation théorique * publicodes-commun . jours par an / 1000
+  unité: kWh
+
+acv . console portable:
+  titre: Enceinte connectée
+acv . console portable . fabrication:
+  formule: 64800
+  unité: gCO2e
+acv . console portable . distribution:
+  formule: 300
+  unité: gCO2e
+acv . console portable . usage théorique:
+  formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
+  unité: gCO2e
+acv . console portable . fin de vie:
+  formule: 500
+  unité: gCO2e
+acv . console portable . durée de vie théorique:
+  formule: 6
+  unité: an
+acv . console portable . consommation en mode actif:
+  formule: 10
+  unité: Wh
+acv . console portable . profil utilisation théorique:
+  formule: 1
+  unité: heure/jour
+acv . console portable . consommation annuelle:
+  formule: consommation en mode actif * profil utilisation théorique * publicodes-commun . jours par an / 1000
+  unité: kWh
+
+acv . imprimante:
+acv . imprimante . fabrication:
+  formule: 10500
+  unité: gCO2e
+acv . imprimante . distribution:
+  formule: 300
+  unité: gCO2e
+acv . imprimante . usage théorique:
+  formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
+  unité: gCO2e
+acv . imprimante . fin de vie:
+  formule: 10200
+  unité: gCO2e
+acv . imprimante . durée de vie théorique:
+  formule: 5
+  unité: an
+acv . imprimante . consommation en mode actif:
+  formule: 60
+  unité: Wh
+acv . imprimante . profil utilisation théorique:
+  formule: 1
+  unité: heure/jour
+acv . imprimante . consommation annuelle:
+  formule: consommation en mode actif * profil utilisation théorique * publicodes-commun . jours par an / 1000
+  unité: kWh
