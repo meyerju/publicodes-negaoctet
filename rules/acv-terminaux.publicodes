@@ -1,6 +1,11 @@
 acv:
+  titre: Analyse de cycle de vie des appareils
+  description: |
+    Cette section présente les émissions de gaz à effet de serre liées à la fabrication, la distribution, l'usage et la fin de vie des appareils électroniques selon l'étude menée par Negaoctet.
 
 acv . smartphone:
+  description: |
+    6,63 inches screen mix of LCD and OLED technologies, 8 GB RAM, 210 GB memory (mix pondéré entre 3 configurations, 24%,24%, 52%)
 acv . smartphone . fabrication:
   formule: 83000
   unité: gCO2e
@@ -30,6 +35,8 @@ acv . smartphone . consommation annuelle:
   unité: kWh
 
 acv . tablette:
+  description: |
+    10.53 inches screen mix of LCD screen, 4.7 GB RAM, 144 GB memory (mix pondéré entre 3 configurations, étude [ADEME-ARCEP](https://librairie.ademe.fr/consommer-autrement/5226-evaluation-de-l-impact-environnemental-du-numerique-en-france-et-analyse-prospective.html), Rapport 2, page 42)
 acv . tablette . fabrication:
   formule: 56300
   unité: gCO2e
@@ -59,6 +66,8 @@ acv . tablette . consommation annuelle:
   unité: kWh
 
 acv . ordinateur portable:
+  description: |
+    14,6 inches screen, 1 CPU, 11 GB RAM, 497 GB SSD (mix pondéré entre 3 configurations, étude [ADEME-ARCEP](https://librairie.ademe.fr/consommer-autrement/5226-evaluation-de-l-impact-environnemental-du-numerique-en-france-et-analyse-prospective.html), Rapport 2, page 43-44)
 acv . ordinateur portable . fabrication:
   formule: 170300
   unité: gCO2e
@@ -88,6 +97,8 @@ acv . ordinateur portable . consommation annuelle:
   unité: kWh
 
 acv . TV:
+  description: |
+    Average dimension and technology (82% LCD (45 inches), 1% OLED (53 inches), 17% OLED (68 inches)) (mix pondéré entre 3 configurations)
 acv . TV . fabrication:
   formule: 372600
   unité: gCO2e
@@ -117,6 +128,8 @@ acv . TV . consommation annuelle:
   unité: kWh
 
 acv . ordinateur fixe:
+  description: |
+    1 CPU, 10 GB RAM, 1173 GB HDD, 442 GB SSD, mix of integrated or separated graphic card  (mix pondéré entre 5 configurations, étude [ADEME-ARCEP](https://librairie.ademe.fr/consommer-autrement/5226-evaluation-de-l-impact-environnemental-du-numerique-en-france-et-analyse-prospective.html), Rapport 2, page 45)
 acv . ordinateur fixe . fabrication:
   formule: 258600
   unité: gCO2e
@@ -146,6 +159,8 @@ acv . ordinateur fixe . consommation annuelle:
   unité: kWh
 
 acv . écran:
+  description: |
+    Dimension moyenne (24 inches) et mix de technologie (98.6% LCD, 1.4% OLED)  (mix pondéré entre 2 configurations, étude [ADEME-ARCEP](https://librairie.ademe.fr/consommer-autrement/5226-evaluation-de-l-impact-environnemental-du-numerique-en-france-et-analyse-prospective.html), Rapport 2, page 49)
 acv . écran . fabrication:
   formule: 64600
   unité: gCO2e
