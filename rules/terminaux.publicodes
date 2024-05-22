@@ -130,7 +130,7 @@ moyenne utilisation TV par défaut:
 
 smartphone:
 smartphone . construction:
-  formule: acv . smartphone . fabrication + acv . smartphone . distribution
+  formule: acv . smartphone . carbone . fabrication + acv . smartphone . carbone . distribution
   unité: gCO2e
 
 smartphone . durée d'usage:
@@ -151,7 +151,7 @@ smartphone . profil utilisation:
 
 tablette:
 tablette . construction:
-  formule: acv . tablette . fabrication + acv . tablette . distribution
+  formule: acv . tablette . carbone . fabrication + acv . tablette . carbone . distribution
   unité: gCO2e
 
 tablette . durée d'usage:
@@ -172,7 +172,7 @@ tablette . profil utilisation:
 
 ordinateur portable:
 ordinateur portable . construction:
-  formule: acv . ordinateur portable . fabrication + acv . ordinateur portable . distribution
+  formule: acv . ordinateur portable . carbone . fabrication + acv . ordinateur portable . carbone . distribution
   unité: gCO2e
 
 ordinateur portable . durée d'usage:
@@ -193,7 +193,7 @@ ordinateur portable . profil utilisation:
 
 TV:
 TV . construction:
-  formule: acv . TV . fabrication + acv . TV . distribution
+  formule: acv . TV . carbone . fabrication + acv . TV . carbone . distribution
   unité: gCO2e
 
 TV . durée d'usage:
@@ -214,12 +214,12 @@ TV . profil utilisation:
 
 ordinateur fixe:
 ordinateur fixe . construction:
-  formule: acv . ordinateur fixe . fabrication + acv . ordinateur fixe . distribution
+  formule: acv . ordinateur fixe . carbone . fabrication + acv . ordinateur fixe . carbone . distribution
   unité: gCO2e
 
 écran:
 écran . construction:
-  formule: acv . écran . fabrication + acv . écran . distribution
+  formule: acv . écran . carbone . fabrication + acv . écran . carbone . distribution
   unité: gCO2e
 
 ordinateur et écran:

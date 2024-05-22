@@ -6,21 +6,33 @@ acv:
 acv . smartphone:
   description: |
     6,63 inches screen mix of LCD and OLED technologies, 8 GB RAM, 210 GB memory (mix pondéré entre 3 configurations, 24%,24%, 52%)
-acv . smartphone . fabrication:
+acv . smartphone . carbone:
+acv . smartphone . eau:
+
+acv . smartphone . carbone . fabrication:
   formule: 83000
   unité: gCO2e
-acv . smartphone . distribution:
+acv . smartphone . eau . fabrication:
+  formule: 1000
+  unité: l
+acv . smartphone . carbone . distribution:
   formule: 2100
   unité: gCO2e
-acv . smartphone . usage julia:
+acv . smartphone . eau . distribution:
+  formule: 1000
+  unité: l
+acv . smartphone . carbone . usage julia:
   formule: 600
   unité: gCO2e
-acv . smartphone . usage théorique:
+acv . smartphone . carbone . usage théorique:
   formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
   unité: gCO2e
-acv . smartphone . fin de vie:
+acv . smartphone . carbone . fin de vie:
   formule: 200
   unité: gCO2e
+acv . smartphone . eau . fin de vie:
+  formule: 1000
+  unité: l
 acv . smartphone . durée de vie théorique:
   formule: 2.5
   unité: an
@@ -37,21 +49,33 @@ acv . smartphone . consommation annuelle:
 acv . tablette:
   description: |
     10.53 inches screen mix of LCD screen, 4.7 GB RAM, 144 GB memory (mix pondéré entre 3 configurations, étude [ADEME-ARCEP](https://librairie.ademe.fr/consommer-autrement/5226-evaluation-de-l-impact-environnemental-du-numerique-en-france-et-analyse-prospective.html), Rapport 2, page 42)
-acv . tablette . fabrication:
+acv . tablette . carbone:
+acv . tablette . eau:
+
+acv . tablette . carbone . fabrication:
   formule: 56300
   unité: gCO2e
-acv . tablette . distribution:
+acv . tablette . eau . fabrication:
+  formule: 1000
+  unité: l
+acv . tablette . carbone . distribution:
   formule: 3400
   unité: gCO2e
-acv . tablette . usage julia:
+acv . tablette . eau . distribution:
+  formule: 1000
+  unité: l
+acv . tablette . carbone . usage julia:
   formule: 3200
   unité: gCO2e
-acv . tablette . usage théorique:
+acv . tablette . carbone . usage théorique:
   formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
   unité: gCO2e
-acv . tablette . fin de vie:
+acv . tablette . carbone . fin de vie:
   formule: 400
   unité: gCO2e
+acv . tablette . eau . fin de vie:
+  formule: 1000
+  unité: l
 acv . tablette . durée de vie théorique:
   formule: 3
   unité: an
@@ -68,21 +92,33 @@ acv . tablette . consommation annuelle:
 acv . ordinateur portable:
   description: |
     14,6 inches screen, 1 CPU, 11 GB RAM, 497 GB SSD (mix pondéré entre 3 configurations, étude [ADEME-ARCEP](https://librairie.ademe.fr/consommer-autrement/5226-evaluation-de-l-impact-environnemental-du-numerique-en-france-et-analyse-prospective.html), Rapport 2, page 43-44)
-acv . ordinateur portable . fabrication:
+acv . ordinateur portable . carbone:
+acv . ordinateur portable . eau:
+
+acv . ordinateur portable . carbone . fabrication:
   formule: 170300
   unité: gCO2e
-acv . ordinateur portable . distribution:
+acv . ordinateur portable . eau . fabrication:
+  formule: 1000
+  unité: l
+acv . ordinateur portable . carbone . distribution:
   formule: 12300
   unité: gCO2e
-acv . ordinateur portable . usage julia:
+acv . ordinateur portable . eau . distribution:
+  formule: 1000
+  unité: l
+acv . ordinateur portable . carbone . usage julia:
   formule: 8300
   unité: gCO2e
-acv . ordinateur portable . usage théorique:
+acv . ordinateur portable . carbone . usage théorique:
   formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
   unité: gCO2e
-acv . ordinateur portable . fin de vie:
+acv . ordinateur portable . carbone . fin de vie:
   formule: 2800
   unité: gCO2e
+acv . ordinateur portable . eau . fin de vie:
+  formule: 1000
+  unité: l
 acv . ordinateur portable . durée de vie théorique:
   formule: 5
   unité: an
@@ -99,21 +135,33 @@ acv . ordinateur portable . consommation annuelle:
 acv . TV:
   description: |
     Average dimension and technology (82% LCD (45 inches), 1% OLED (53 inches), 17% OLED (68 inches)) (mix pondéré entre 3 configurations)
-acv . TV . fabrication:
+acv . TV . carbone:
+acv . TV . eau:
+
+acv . TV . carbone . fabrication:
   formule: 372600
   unité: gCO2e
-acv . TV . distribution:
+acv . TV . eau . fabrication:
+  formule: 1000
+  unité: l
+acv . TV . carbone . distribution:
   formule: 3200
   unité: gCO2e
-acv . TV . usage julia:
+acv . TV . eau . distribution:
+  formule: 1000
+  unité: l
+acv . TV . carbone . usage julia:
   formule: 92700
   unité: gCO2e
-acv . TV . usage théorique:
+acv . TV . carbone . usage théorique:
   formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
   unité: gCO2e
-acv . TV . fin de vie:
+acv . TV . carbone . fin de vie:
   formule: 11800
   unité: gCO2e
+acv . TV . eau . fin de vie:
+  formule: 1000
+  unité: l
 acv . TV . durée de vie théorique:
   formule: 8
   unité: an
@@ -130,21 +178,33 @@ acv . TV . consommation annuelle:
 acv . ordinateur fixe:
   description: |
     1 CPU, 10 GB RAM, 1173 GB HDD, 442 GB SSD, mix of integrated or separated graphic card  (mix pondéré entre 5 configurations, étude [ADEME-ARCEP](https://librairie.ademe.fr/consommer-autrement/5226-evaluation-de-l-impact-environnemental-du-numerique-en-france-et-analyse-prospective.html), Rapport 2, page 45)
-acv . ordinateur fixe . fabrication:
+acv . ordinateur fixe . carbone:
+acv . ordinateur fixe . eau:
+
+acv . ordinateur fixe . carbone . fabrication:
   formule: 258600
   unité: gCO2e
-acv . ordinateur fixe . distribution:
+acv . ordinateur fixe . eau . fabrication:
+  formule: 1000
+  unité: l
+acv . ordinateur fixe . carbone . distribution:
   formule: 2900
   unité: gCO2e
-acv . ordinateur fixe . usage julia:
+acv . ordinateur fixe . eau . distribution:
+  formule: 1000
+  unité: l
+acv . ordinateur fixe . carbone . usage julia:
   formule: 34100
   unité: gCO2e
-acv . ordinateur fixe . usage théorique:
+acv . ordinateur fixe . carbone . usage théorique:
   formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
   unité: gCO2e
-acv . ordinateur fixe . fin de vie:
+acv . ordinateur fixe . carbone . fin de vie:
   formule: 6600
   unité: gCO2e
+acv . ordinateur fixe . eau . fin de vie:
+  formule: 1000
+  unité: l
 acv . ordinateur fixe . durée de vie théorique:
   formule: 6
   unité: an
@@ -161,21 +221,33 @@ acv . ordinateur fixe . consommation annuelle:
 acv . écran:
   description: |
     Dimension moyenne (24 inches) et mix de technologie (98.6% LCD, 1.4% OLED)  (mix pondéré entre 2 configurations, étude [ADEME-ARCEP](https://librairie.ademe.fr/consommer-autrement/5226-evaluation-de-l-impact-environnemental-du-numerique-en-france-et-analyse-prospective.html), Rapport 2, page 49)
-acv . écran . fabrication:
+acv . écran . carbone:
+acv . écran . eau:
+
+acv . écran . carbone . fabrication:
   formule: 64600
   unité: gCO2e
-acv . écran . distribution:
+acv . écran . eau . fabrication:
+  formule: 1000
+  unité: l
+acv . écran . carbone . distribution:
   formule: 1300
   unité: gCO2e
-acv . écran . usage julia:
+acv . écran . eau . distribution:
+  formule: 1000
+  unité: l
+acv . écran . carbone . usage julia:
   formule: 23900
   unité: gCO2e
-acv . écran . usage théorique:
+acv . écran . carbone . usage théorique:
   formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
   unité: gCO2e
-acv . écran . fin de vie:
+acv . écran . carbone . fin de vie:
   formule: 3900
   unité: gCO2e
+acv . écran . eau . fin de vie:
+  formule: 1000
+  unité: l
 acv . écran . durée de vie théorique:
   formule: 6
   unité: an
@@ -193,18 +265,30 @@ acv . casque:
   titre: Casque de réalité virtuelle
   description: |
     Moyenne de deux technologies (50% LCD, 50%OLED) + prise en compte de deux manettes
-acv . casque . fabrication:
+acv . casque . carbone:
+acv . casque . eau:
+
+acv . casque . carbone . fabrication:
   formule: 70400
   unité: gCO2e
-acv . casque . distribution:
+acv . casque . eau . fabrication:
+  formule: 1000
+  unité: l
+acv . casque . carbone . distribution:
   formule: 400
   unité: gCO2e
-acv . casque . usage théorique:
+acv . casque . eau . distribution:
+  formule: 1000
+  unité: l
+acv . casque . carbone . usage théorique:
   formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
   unité: gCO2e
-acv . casque . fin de vie:
+acv . casque . carbone . fin de vie:
   formule: 1300
   unité: gCO2e
+acv . casque . eau . fin de vie:
+  formule: 1000
+  unité: l
 acv . casque . durée de vie théorique:
   formule: 5
   unité: an
@@ -220,19 +304,31 @@ acv . casque . consommation annuelle:
 
 acv . enceinte:
   titre: Enceinte connectée
-acv . enceinte . fabrication:
+acv . enceinte . carbone:
+acv . enceinte . eau:
+
+acv . enceinte . carbone . fabrication:
   formule: 19500
   unité: gCO2e
-acv . enceinte . distribution:
+acv . enceinte . eau . fabrication:
+  formule: 1000
+  unité: l
+acv . enceinte . carbone . distribution:
   formule: 300
   unité: gCO2e
-acv . enceinte . usage théorique:
+acv . enceinte . eau . distribution:
+  formule: 1000
+  unité: l
+acv . enceinte . carbone . usage théorique:
   formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
   unité: gCO2e
-acv . enceinte . fin de vie:
+acv . enceinte . carbone . fin de vie:
   formule: 700
   unité: gCO2e
-acv . enceinte . durée de vie théorique:
+acv . enceinte . eau . fin de vie:
+  formule: 1000
+  unité: l
+acv . enceinte . carbone . durée de vie théorique:
   formule: 5
   unité: an
 acv . enceinte . consommation en mode actif:
@@ -246,18 +342,30 @@ acv . enceinte . consommation annuelle:
   unité: kWh
 
 acv . console de salon:
-acv . console de salon . fabrication:
+acv . console de salon . carbone:
+acv . console de salon . eau:
+
+acv . console de salon . carbone . fabrication:
   formule: 279000
   unité: gCO2e
-acv . console de salon . distribution:
+acv . console de salon . eau . fabrication:
+  formule: 1000
+  unité: l
+acv . console de salon . carbone . distribution:
   formule: 1200
   unité: gCO2e
-acv . console de salon . usage théorique:
+acv . console de salon . eau . distribution:
+  formule: 1000
+  unité: l
+acv . console de salon . carbone . usage théorique:
   formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
   unité: gCO2e
-acv . console de salon . fin de vie:
+acv . console de salon . carbone . fin de vie:
   formule: 4600
   unité: gCO2e
+acv . console de salon . eau . fin de vie:
+  formule: 1000
+  unité: l
 acv . console de salon . durée de vie théorique:
   formule: 6
   unité: an
@@ -272,19 +380,30 @@ acv . console de salon . consommation annuelle:
   unité: kWh
 
 acv . console portable:
-  titre: Enceinte connectée
-acv . console portable . fabrication:
+acv . console portable . carbone:
+acv . console portable . eau:
+
+acv . console portable . carbone . fabrication:
   formule: 64800
   unité: gCO2e
-acv . console portable . distribution:
+acv . console portable . eau . fabrication:
+  formule: 1000
+  unité: l
+acv . console portable . carbone . distribution:
   formule: 300
   unité: gCO2e
-acv . console portable . usage théorique:
+acv . console portable . eau . distribution:
+  formule: 1000
+  unité: l
+acv . console portable . carbone . usage théorique:
   formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
   unité: gCO2e
-acv . console portable . fin de vie:
+acv . console portable . carbone . fin de vie:
   formule: 500
   unité: gCO2e
+acv . console portable . eau . fin de vie:
+  formule: 1000
+  unité: l
 acv . console portable . durée de vie théorique:
   formule: 6
   unité: an
@@ -299,18 +418,30 @@ acv . console portable . consommation annuelle:
   unité: kWh
 
 acv . imprimante:
-acv . imprimante . fabrication:
+acv . imprimante . carbone:
+acv . imprimante . eau:
+
+acv . imprimante . carbone . fabrication:
   formule: 10500
   unité: gCO2e
-acv . imprimante . distribution:
+acv . imprimante . eau . fabrication:
+  formule: 1000
+  unité: l
+acv . imprimante . carbone . distribution:
   formule: 300
   unité: gCO2e
-acv . imprimante . usage théorique:
+acv . imprimante . eau . distribution:
+  formule: 1000
+  unité: l
+acv . imprimante . carbone . usage théorique:
   formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
   unité: gCO2e
-acv . imprimante . fin de vie:
+acv . imprimante . carbone . fin de vie:
   formule: 10200
   unité: gCO2e
+acv . imprimante . eau . fin de vie:
+  formule: 1000
+  unité: l
 acv . imprimante . durée de vie théorique:
   formule: 5
   unité: an
