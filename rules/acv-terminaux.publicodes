@@ -19,7 +19,7 @@ acv . smartphone . carbone . distribution:
   formule: 2100
   unité: gCO2e
 acv . smartphone . eau . distribution:
-  formule: 10
+  formule: 106 test 
   unité: l
 acv . smartphone . carbone . usage julia:
   formule: 600
