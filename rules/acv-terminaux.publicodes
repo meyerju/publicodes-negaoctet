@@ -22,7 +22,7 @@ acv . smartphone . eau . distribution:
   formule: 106 test 
   unité: l
 acv . smartphone . carbone . usage julia:
-  formule: 600
+  formule: 600 autre changement
   unité: gCO2e
 acv . smartphone . carbone . usage théorique:
   formule: consommation annuelle * publicodes-commun . intensité électricité * 1000 gCO2e/kgCO2e * durée de vie théorique
